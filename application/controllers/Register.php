@@ -9,7 +9,7 @@ class Register extends CI_Controller {
         $this->load->model('member_model');
   }
 
-
+//-----------------------------------------//
 	public function index()
 	{
 				// echo '<pre>';
@@ -26,11 +26,12 @@ class Register extends CI_Controller {
 				$this->load->view('js');
 	}
 
+//------------------------------------------//
 	public function adding()
 	{
 				$this->member_model->addmember();
 	}
-
+//---------------------------------------------//
 	public function login()
 	{
 				$this->load->view('css');
@@ -41,7 +42,7 @@ class Register extends CI_Controller {
 				$this->load->view('footer');
 				$this->load->view('js');
 	}
-
+//-----------------------------------------------//
 	public function checklogin()
 	{
 		// echo '<pre>';
@@ -49,7 +50,7 @@ class Register extends CI_Controller {
 		// echo '</pre>';
 	}
 
-
+//--------------------------------------------------//
 	public function editdata()
 	{
 		// echo '<pre>';
@@ -57,7 +58,7 @@ class Register extends CI_Controller {
 		// echo '</pre>';
 		$this->member_model->editmember();
 	}
-
+//-------------------------------------------------//
 
 
 }

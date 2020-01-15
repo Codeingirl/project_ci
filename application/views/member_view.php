@@ -16,6 +16,7 @@
               <th>tel</th>
               <th>time</th>
               <th>update</th>
+              <th>delete</th>
             </tr>
           </thead>
           <tbody>
@@ -31,6 +32,7 @@
               <td><?php echo $row->m_tel; ?></td>
               <td><?php echo $row->datesave; ?></td>
               <td><a href="<?php echo site_url('member/edit/').$row->m_id; ?>">Edit</a></td>
+              <td><a href="<?php echo site_url('member/delete/').$row->m_id; ?>" onclick="return confirm('confirm to delete');">Delete</a></td>
             </tr>
           <?php } ;?>
           </tbody>

@@ -9,7 +9,7 @@ class Insertdata extends CI_Controller {
                 $this->load->model('member_model');
         }
 
-
+//----------------------------------------------//
 	public function index()
 	{
 		$this->load->view('css');
@@ -21,13 +21,13 @@ class Insertdata extends CI_Controller {
 		$this->load->view('js');
 	}
 
-
+//-------------------------------------------//
 	public function adding()
 	{
 		$this->member_model->addmember();
 
 	}
-
+//--------------------------------------------//
 
 
 

@@ -26,7 +26,7 @@ class Member_model extends CI_Model {
       echo 'false';
     }
   }
-
+//------------------------//
   public function showdata()
           {
             // echo '<pre>';
@@ -37,7 +37,7 @@ class Member_model extends CI_Model {
                   return $query->result();
           }
 
-
+//-----------------------------//
   public function read($m_id)
     {
             $this->db->select('*');
@@ -50,7 +50,7 @@ class Member_model extends CI_Model {
                       }
                       return false;
     }
-
+//---------------------------------//
     public function editmember()
     {
 
@@ -77,6 +77,18 @@ class Member_model extends CI_Model {
         echo 'Edit false';
       }
     }
+//----------------------------------//
+    public function deldata($m_id)
+            {
+              // echo '<pre>';
+              // print_r($data);
+              // echo '</pre>';
+              // exit;
+              $this->db->delete('tbl_member',array('m_id' => $m_id ));
+
+            }
+//-----------------------------------//
+
 
 }
 

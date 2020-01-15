@@ -9,7 +9,7 @@ class Member extends CI_Controller {
                 $this->load->model('member_model');
         }
 
-
+//--------------------------------//
 	public function index()
 	{
 		$data['query']=$this->member_model->showdata();
@@ -22,6 +22,7 @@ class Member extends CI_Controller {
 		$this->load->view('js');
 	}
 
+//-------------------------------//
 	public function edit($m_id)
 	{
 		$data['rowedit']=$this->member_model->read($m_id);
@@ -38,6 +39,17 @@ class Member extends CI_Controller {
 		$this->load->view('js');
 	}
 
+//------------------------------//
+	public function delete($m_id)
+	{
+		// echo '<pre>';
+		// print_r($_POST);
+		// echo '</pre>';
+		$this->member_model->deldata($m_id);
+		redirect('Member','refresh');
+	}
+
+//------------------------------//
 
 
 
