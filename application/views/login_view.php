@@ -20,7 +20,7 @@
 				<div class="form-group row">
 					<div class="col-sm-2 control-label"></div>
 					<div class="col-sm-5">
-						<button type="submit"  class="btn btn-primary"> Log In	</button>
+						<button type="submit"  class="btn btn-primary" name="login"> Log In	</button>
 				</div>
 		  </div>
 		  </form>

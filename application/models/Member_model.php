@@ -21,7 +21,7 @@ class Member_model extends CI_Model {
     $query = $this->db->insert('tbl_member',$data);
 
     if($query){
-      echo 'seccess';
+      redirect('','refresh');
     }else {
       echo 'false';
     }
