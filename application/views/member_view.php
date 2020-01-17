@@ -13,6 +13,7 @@
               <th>Lastname</th>
               <th>email</th>
               <th>tel</th>
+              <th>type</th>
               <th>time</th>
               <th>update</th>
               <th>delete</th>
@@ -29,6 +30,7 @@
               <td><?php echo $row->m_lname; ?></td>
               <td><?php echo $row->m_email; ?></td>
               <td><?php echo $row->m_tel; ?></td>
+              <td><?php echo $row->m_type; ?></td>
               <td><?php echo $row->datesave; ?></td>
               <td><a href="<?php echo site_url('member/edit/').$row->m_id; ?>">Edit</a></td>
               <td><a href="<?php echo site_url('member/delete/').$row->m_id; ?>" onclick="return confirm('confirm to delete');">Delete</a></td>

@@ -6,15 +6,15 @@
 			<br>
 		  <form action="<?php echo site_url('register/checklogin') ?>" method="post" class="form-horizontal">
 		  <div class="form-group row">
-				<div class="col-sm-2 control-label"> Username </div>
+				<div class="col-sm-2 control-label"> Email </div>
 				<div class="col-sm-5">
-					<input type="text" name="Username" class="form-control" required placeholder="Usename"></div>
+					<input type="text" name="m_email" class="form-control" required placeholder="please Enter your Email"></div>
 				</div>
 
 				<div class="form-group row">
 					<div class="col-sm-2 control-label"> Password </div>
 					<div class="col-sm-5">
-						<input type="password	" name="Password" class="form-control" required placeholder="Password"></div>
+						<input type="password	" name="m_password" class="form-control" required placeholder="Password"></div>
 				</div>
 
 				<div class="form-group row">

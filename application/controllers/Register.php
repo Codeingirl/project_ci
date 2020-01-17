@@ -8,7 +8,7 @@ class Register extends CI_Controller {
         parent::__construct();
         $this->load->model('member_model');
 				 $this->load->model('Register_model');
-         //$this->load->model('Login_model');
+         $this->load->model('Login_model');
   }
 
 //-----------------------------------------//
@@ -59,7 +59,7 @@ public function adding()
 				 'm_user'=> $m_user,
 				 'm_name'=> $m_name,
 				 'm_lname'=> $m_lname,
-				 'm_password'=> md5($m_password),
+				 'm_password'=>md5($m_password),
 				 'm_email' => $m_email,
 				 'm_tel'  => $m_tel,
 
@@ -108,9 +108,38 @@ public function adding()
 //-----------------------------------------------//
 	public function checklogin()
 	{
+		// $m_password =($this->input->post('m_password'));
 		// echo '<pre>';
-		// print_r($_POST);
+		// print_r($m_password);
 		// echo '</pre>';
+		// exit;
+		$this->load->library('form_validation');
+			$this->form_validation->set_rules('m_email', 'm_mail','required');
+			$this->form_validation->set_rules('m_password', 'm_Password','required');
+			if ($this->form_validation->run())
+			{
+					$m_email = $this->input->post('m_email');
+					$m_password =md5($this->input->post('m_password'));
+					$this->load->model('Login_model');
+
+					if ($this->Login_model->login($m_email, $m_password))
+					{
+							$user_data = array(
+									'm_email' => $m_email
+							);
+							$this->session->set_userdata($user_data);
+							redirect('home');
+					}
+					else
+					{
+							$this->session->set_flashdata('error', '<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-triangle"></i> กรุณากรอก Email หรือ Password ให้ถูกต้อง !! </div>');
+							redirect('Register/login','refresh');
+					}
+			}
+			else
+			{
+					redirect('Register/login','refresh');
+			}
 	}
 
 //--------------------------------------------------//
