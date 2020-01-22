@@ -148,6 +148,7 @@ public function adding()
 		// echo '<pre>';
 		// print_r($_POST);
 		// echo '</pre>';
+		// exit;
 		$this->member_model->editmember();
 	}
 //-------------------------------------------------//

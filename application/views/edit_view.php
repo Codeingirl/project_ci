@@ -17,6 +17,13 @@
 						<input type="password" name="m_password" class="form-control" required placeholder="Password" value="<?php echo $rowedit->m_password; ?>"></div>
 				</div>
 
+        <div class="form-group row">
+					<div class="col-sm-2 control-label"> </div>
+					<div class="col-sm-5">
+						<input type="password" name="m_confirmpassword" class="form-control" required placeholder="Confirm Password"></div>
+				</div>
+
+
 				<div class="form-group row">
 					<div class="col-sm-2 control-label"> Name </div>
 					<div class="col-sm-5">
