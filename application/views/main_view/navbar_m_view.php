@@ -18,6 +18,6 @@
 			<li><a href="single-post.html">Page</a></li>
 		</ul>
 		<div class="header-add">
-			<img src="img/add.jpg" alt="">
+			<img src="<?php echo base_url('img/add.jpg');?>" alt="add">
 		</div>
 	</header>
