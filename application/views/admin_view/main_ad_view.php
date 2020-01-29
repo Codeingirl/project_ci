@@ -60,6 +60,7 @@
                       <thead>
                           <tr>
                             <th>ID</th>
+                            <th>Profile</th>
                             <th>user</th>
                             <th>password</th>
                             <th>name</th>
@@ -74,13 +75,16 @@
                       <tbody> <?php foreach ($query as $row){?>
                           <tr class="tr-shadow">
                               <td><?php echo $row->m_id; ?></td>
+                              <td>
+                                <img src="<?php echo base_url('img/profile'); ?>/<?php echo $row->m_img; ?>" width="100px">
+                              </td>
                               <td><?php echo $row->m_user; ?></td>
                               <td><?php echo $row->m_password; ?></td>
                               <td><?php echo $row->m_name; ?></td>
                               <td><?php echo $row->m_lname; ?></td>
                               <td><span class="block-email"><?php echo $row->m_email; ?></span></td>
                               <td><?php echo $row->m_tel; ?></td>
-                              <td><span class="status--process"><?php echo $row->m_type; ?></span></td>
+                              <td><span class="status--process"><?php echo $row->m_typename; ?></span></td>
                               <td><?php echo $row->datesave; ?></td>
                               <td>
                                   <div class="table-data-feature">

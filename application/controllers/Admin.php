@@ -6,14 +6,17 @@ class Admin extends CI_Controller {
 	public function __construct()
         {
                 parent::__construct();
+								if($this->session->userdata('m_type')!=1){
+									redirect('login','refresh');
+								}
                 $this->load->model('member_model');
         }
 
 	public function index()
 	{
-		$data['query']=$this->member_model->showdata();
+		$data['query']=$this->member_model->showdata2();
 		$this->load->view('admin_view/css_ad_view');
-		$this->load->view('admin_view/header_ad_view');
+		$this->load->view('admin_view/header_ad_view',);
 		$this->load->view('admin_view/main_ad_view',$data);
 		$this->load->view('admin_view/footer_ad_view');
 		$this->load->view('admin_view/js_ad_view');

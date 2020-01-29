@@ -36,6 +36,18 @@ class Member_model extends CI_Model {
           }
 
 //-----------------------------//
+public function showdata2()
+        {
+
+          $this->db->select('m.*,t.*');
+          $this->db->from('tbl_member as m');
+          $this->db->join('tbl_type as t', 'm.m_type=t.m_type');
+          $query=$this->db->get();
+          return $query->result();
+
+        }
+//------------------------------//
+
   public function read($m_id)
     {
             $this->db->select('*');
@@ -51,7 +63,19 @@ class Member_model extends CI_Model {
 //---------------------------------//
 public function editmember()
 {
+  $config['upload_path'] = './img/profile/';
+  $config['allowed_types'] = 'gif|jpg|png';
+  $config['max_size'] = '2000';
+  $config['max_width'] = '3000';
+  $config['max_heigth'] = '3000';
 
+  $this->load->library('upload',$config);
+  if (! $this->upload->do_upload('m_img'))
+  {
+      echo $this->upload->display_errors();
+  }else {
+    $data = $this->upload->data();
+    $filename = $data['file_name'];
   // echo '<pre>';
   // print_r($_POST);
   // echo '</pre>';
@@ -72,9 +96,10 @@ public function editmember()
     'm_user'=> $m_user,
     'm_name'=> $m_name,
     'm_lname'=> $m_lname,
-    'm_password'=>md5($m_password),
+    'm_password'=>sha1($m_password),
     'm_email' => $m_email,
     'm_tel'  => $m_tel,
+    'm_img' => $filename
 
    );
   }
@@ -91,6 +116,8 @@ public function editmember()
     echo 'Edit success';
   }else {
     echo 'Edit false';
+  }
+
   }
 }
 
@@ -134,7 +161,13 @@ public function editmember()
 
             }
 //-----------------------------------//
-
+public function fetch_user_login($m_email,$m_password)
+        {
+          $this->db->where('m_email',$m_email);
+          $this->db->where('m_password',$m_password);
+          $query = $this->db->get('tbl_member');
+          return $query->row();
+        }
 
 }
 

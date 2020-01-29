@@ -12,7 +12,7 @@ class Member extends CI_Controller {
 //--------------------------------//
 	public function index()
 	{
-		$data['query']=$this->member_model->showdata();
+		$data['query']=$this->member_model->showdata2();
 		// echo '<pre>';
 		// print_r($data);
 		// echo '</pre>';
@@ -54,7 +54,13 @@ class Member extends CI_Controller {
 	}
 
 //------------------------------//
+public function logout()
+{
+		$this->session->sess_destroy();//ล้างsession
 
+		redirect('Register/login');//กลับไปหน้า Login
+}
+//-----------------------------//
 
 
 

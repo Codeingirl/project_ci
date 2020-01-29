@@ -4,7 +4,7 @@
 		<div class="col-md-8">
 			<h2>LOG IN</h2>
 			<br>
-		  <form action="<?php echo site_url('register/checklogin') ?>" method="post" class="form-horizontal">
+		  <form action="<?php echo site_url('register/checklogin2') ?>" method="post" class="form-horizontal">
 		  <div class="form-group row">
 				<div class="col-sm-2 control-label"> Email </div>
 				<div class="col-sm-5">
