@@ -35,14 +35,27 @@ public function adding()
 	// print_r($_POST);
 	// echo '</pre>';
 	//exit;
+	$config['upload_path'] = './img/profile/';
+	$config['allowed_types'] = 'gif|jpg|png';
+	$config['max_size'] = '2000';
+	$config['max_width'] = '3000';
+	$config['max_heigth'] = '3000';
 
-	$m_user        = $this->input->post('m_user');
-	$m_name         = $this->input->post('m_name');
-	$m_lname         = $this->input->post('m_lname');
-	$m_email             = $this->input->post('m_email');
-	$m_password          = $this->input->post('m_password');
-	$m_confirmpassword   = $this->input->post('m_confirmpassword');
-	$m_tel            = $this->input->post('m_tel');
+	$this->load->library('upload',$config);
+	if (! $this->upload->do_upload('m_img'))
+	{
+			echo $this->upload->display_errors();
+	}else {
+		$data = $this->upload->data();
+		$filename = $data['file_name'];
+
+			$m_user        = $this->input->post('m_user');
+			$m_name         = $this->input->post('m_name');
+			$m_lname         = $this->input->post('m_lname');
+			$m_email             = $this->input->post('m_email');
+			$m_password          = $this->input->post('m_password');
+			$m_confirmpassword   = $this->input->post('m_confirmpassword');
+			$m_tel            = $this->input->post('m_tel');
 
 
 	if ($this->Register_model->addmember($m_email))
@@ -59,9 +72,10 @@ public function adding()
 				 'm_user'=> $m_user,
 				 'm_name'=> $m_name,
 				 'm_lname'=> $m_lname,
-				 'm_password'=>md5($m_password),
+				 'm_password'=>sha1($m_password),
 				 'm_email' => $m_email,
 				 'm_tel'  => $m_tel,
+				 'm_img' => $filename
 
 				);
 			 }
@@ -73,6 +87,7 @@ public function adding()
 
 			 $success = $this->db->insert('tbl_member',$data);
 			 return redirect('home');
+			 }
 	}
 
 
@@ -104,6 +119,52 @@ public function adding()
 				$this->load->view('login_view');
 				$this->load->view('footer');
 				$this->load->view('js');
+	}
+//-------------------------------------------------//
+
+	public function checklogin2()
+	{
+		if($this->input->post('m_email')==''){
+			$this->load->view('login');
+		}else{
+			// echo '<pre>';
+			// print_r($_POST);
+			// echo '</pre>';
+			// exit;
+			$result = $this->member_model->fetch_user_login(
+				$this->input->post('m_email'),
+				sha1($this->input->post('m_password'))
+			);
+			// print_r($result);
+			// exit;
+			if(!empty($result)){
+				$session_user=array(
+						'm_id' 		=> $result->m_id,
+						'm_type'	=> $result->m_type,
+						'm_name'	=> $result->m_name
+				);
+				// echo '<br>';
+				//print_r{$session_user};
+				//exit;
+				$this->session->set_userdata($session_user);
+				//echo <br>;
+				//print_r{$_SESSION};
+				$m_type = $_SESSION['m_type'];
+				//echo 'level'.$m_type;
+				//echp <hr>;
+				if($m_type==1){
+					redirect('admin','refresh');
+				}elseif($m_type==0){
+					redirect('home','refresh');
+				}
+			}else {
+				$this->session->unset_userdata(array('m_id','m_type','m_name'));
+				redirect('Register');
+			}
+
+		}
+
+
 	}
 //-----------------------------------------------//
 	public function checklogin()

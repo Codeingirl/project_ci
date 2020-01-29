@@ -4,7 +4,7 @@
 		<div class="col-md-8">
 			<h2>Sign In</h2>
 			<br>
-		  <form action="<?php echo site_url('register/adding') ?>" method="post" class="form-horizontal">
+		  <form action="<?php echo site_url('register/adding') ?>" method="post" class="form-horizontal" enctype="multipart/form-data">
 		  <div class="form-group row">
 				<div class="col-sm-2 control-label"> Username </div>
 				<div class="col-sm-5">
@@ -34,6 +34,13 @@
 					<div class="col-sm-5">
 						<input type="text" name="m_lname" class="form-control" required placeholder="Last Name"></div>
 				</div>
+
+        <div class="form-group row">
+					<div class="col-sm-2 control-label"> pic </div>
+					<div class="col-sm-5">
+						<input type="file" name="m_img" class="form-control" accept="img/*"></div>
+				</div>
+
 
 				<div class="form-group row">
 					<div class="col-sm-2 control-label"> Email </div>

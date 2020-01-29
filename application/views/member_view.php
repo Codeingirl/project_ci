@@ -7,6 +7,7 @@
           <thead>
             <tr>
               <th>ID</th>
+              <th>Profile</th>
               <th>user</th>
               <th>password</th>
               <th>name</th>
@@ -24,13 +25,17 @@
 
             <tr>
               <td><?php echo $row->m_id; ?></td>
+              <td>
+                <img src="<?php echo base_url('img/profile'); ?>/<?php echo $row->m_img; ?>" width="100px">
+              </td>
+              <!-- <td><?php //echo $row->m_img; ?></td> -->
               <td><?php echo $row->m_user; ?></td>
               <td><?php echo $row->m_password; ?></td>
               <td><?php echo $row->m_name; ?></td>
               <td><?php echo $row->m_lname; ?></td>
               <td><?php echo $row->m_email; ?></td>
               <td><?php echo $row->m_tel; ?></td>
-              <td><?php echo $row->m_type; ?></td>
+              <td><?php echo $row->m_typename; ?></td>
               <td><?php echo $row->datesave; ?></td>
               <td><a href="<?php echo site_url('member/edit/').$row->m_id; ?>">Edit</a></td>
               <td><a href="<?php echo site_url('member/delete/').$row->m_id; ?>" onclick="return confirm('confirm to delete');">Delete</a></td>

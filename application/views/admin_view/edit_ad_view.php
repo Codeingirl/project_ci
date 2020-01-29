@@ -6,7 +6,13 @@
       <br><br><br><br>
 			<h2>Update data</h2>
 			<br>
-		  <form action="<?php echo site_url('register/editdata') ?>" method="post" class="form-horizontal">
+		  <form action="<?php echo site_url('register/editdata') ?>" method="post" class="form-horizontal" enctype="multipart/form-data">
+        <div class="form-group row">
+  				<div class="col-sm-2 control-label"> Profile </div>
+  				<div class="col-sm-5">
+  					<input type="file" name="m_img" class="form-control" required accept="img/*"></div>
+  				</div>
+
 		  <div class="form-group row">
 				<div class="col-sm-2 control-label"> Username </div>
 				<div class="col-sm-5">

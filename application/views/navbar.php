@@ -10,9 +10,8 @@
 
 		    <ul class="menu">
 		      <a href="<?php echo site_url('home/index') ?>">Home</a>
-		      <a href="<?php echo site_url('member')?>">Member</a>
 		      <a href="<?php echo site_url('register') ?>">Sign In</a>
-		      <a href="<?php echo site_url('register/login') ?>">Log IN</a>
+		      <a href="<?php echo site_url('register/login') ?>">Log In</a>
 		      <label for="chk" class="hide-menu-btn">
 		        <i class="fas fa-times"></i>
 		      </label>
