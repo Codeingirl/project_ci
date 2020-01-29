@@ -1,5 +1,6 @@
 <!--====== Javascripts & Jquery ======-->
-	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="<?php echo base_url('css/admin_css/vendor/jquery-3.2.1.min.js');?>"></script>
+	<script src="<?php echo base_url('js/jquery-3.2.1.min.js');?>"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.slicknav.js"></script>
 	<script src="js/owl.carousel.min.js"></script>

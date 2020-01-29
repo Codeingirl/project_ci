@@ -22,7 +22,7 @@
 	<?php echo site_url('css/slicknav.min.css') ;?>
 
 	<!-- Main Stylesheets -->
-	<link rel="stylesheet" href="css/style.css"/>
+	<?php echo site_url('css/style.css') ;?>
 
 
 	<!--[if lt IE 9]>
