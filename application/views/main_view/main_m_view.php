@@ -33,7 +33,7 @@
     <div class="row">
       <div class="col-lg-8 blog-posts">
         <div class="blog-post featured-post">
-          <img src="img/blog/1.jpg" alt="">
+          <img src="<?php echo base_url(' img/blog/1.jpg');?> alt="">
           <div class="post-date">April 1, 2019</div>
           <h3>The best games of 2019</h3>
           <div class="post-metas">
@@ -47,7 +47,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="blog-post">
-              <img src="img/blog/2.jpg" alt="">
+              <img src="<?php echo base_url('img/blog/2.jpg');?> alt="">
               <div class="post-date">April 1,2019</div>
               <h4>The best games of 2019</h4>
               <div class="post-metas">
@@ -61,7 +61,7 @@
           </div>
           <div class="col-md-6">
             <div class="blog-post">
-              <img src="img/blog/3.jpg" alt="">
+              <img src="<?php echo base_url('img/blog/3.jpg');?> alt="">
               <div class="post-date">April 1,2019</div>
               <h4>Tips to play a better game</h4>
               <div class="post-metas">
@@ -75,7 +75,7 @@
           </div>
           <div class="col-md-6">
             <div class="blog-post">
-              <img src="img/blog/4.jpg" alt="">
+              <img src="<?php echo base_url('img/blog/4.jpg');?> alt="">
               <div class="post-date">April 1,2019</div>
               <h4>The best games of 2019</h4>
               <div class="post-metas">
@@ -89,7 +89,7 @@
           </div>
           <div class="col-md-6">
             <div class="blog-post">
-              <img src="img/blog/5.jpg" alt="">
+              <img src="<?php echo base_url('img/blog/5.jpg');?> alt="">
               <div class="post-date">April 1,2019</div>
               <h4>Tips to play a better game</h4>
               <div class="post-metas">
@@ -124,7 +124,7 @@
           <h2 class="sb-title">Latest News</h2>
           <div class="latest-news-widget">
             <div class="ln-item">
-              <img src="img/blog-thumbs/1.jpg" alt="">
+              <img src="<?php echo base_url('img/blog-thumbs/1.jpg');?> alt="">
               <div class="ln-text">
                 <div class="ln-date">April 1, 2019</div>
                 <h6>10 Amazing new games</h6>
@@ -136,7 +136,7 @@
               </div>
             </div>
             <div class="ln-item">
-              <img src="img/blog-thumbs/2.jpg" alt="">
+              <img src="<?php echo base_url(' img/blog-thumbs/2.jpg');?> alt="">
               <div class="ln-text">
                 <div class="ln-date">April 1, 2019</div>
                 <h6>10 Amazing new games</h6>
@@ -148,7 +148,7 @@
               </div>
             </div>
             <div class="ln-item">
-              <img src="img/blog-thumbs/3.jpg" alt="">
+              <img src="<?php echo base_url(' img/blog-thumbs/3.jpg');?> alt="">
               <div class="ln-text">
                 <div class="ln-date">April 1, 2019</div>
                 <h6>10 Amazing new games</h6>
@@ -160,7 +160,7 @@
               </div>
             </div>
             <div class="ln-item">
-              <img src="img/blog-thumbs/4.jpg" alt="">
+              <img src="<?php echo base_url('img/blog-thumbs/4.jpg');?>" alt="">
               <div class="ln-text">
                 <div class="ln-date">April 1, 2019</div>
                 <h6>10 Amazing new games</h6>
@@ -175,7 +175,7 @@
         </div>
         <div class="sb-widget">
           <a href="#" class="add">
-            <img src="img/add-2.jpg" alt="">
+            <img src="<?php echo base_url('img/add-2.jpg');?>" alt="">
           </a>
         </div>
         <div class="sb-widget">
@@ -189,14 +189,14 @@
               </div>
             </div>
             <div class="lc-item">
-              <img src="img/author-thumbs/2.jpg" alt="">
+              <img src="<?php echo base_url('img/author-thumbs/2.jpg');?>" alt="">
               <div class="lc-text">
                 <h6>Michael James<span> In </span><a href="">The best 2019 Games</a></h6>
                 <div class="lc-date">April 1,2019</div>
               </div>
             </div>
             <div class="lc-item">
-              <img src="img/author-thumbs/3.jpg" alt="">
+              <img src="<?php echo base_url('img/author-thumbs/3.jpgv');?>" alt="">
               <div class="lc-text">
                 <h6>Jane Smith<span> In </span><a href="">The best 2019 Games</a></h6>
                 <div class="lc-date">April 1,2019</div>
@@ -210,7 +210,7 @@
               </div>
             </div>
             <div class="lc-item">
-              <img src="img/author-thumbs/1.jpg" alt="">
+              <img src="<?php echo base_url('img/author-thumbs/1.jpg');?>" alt="">
               <div class="lc-text">
                 <h6>Jane Smith<span> In </span><a href="">The best 2019 Games</a></h6>
                 <div class="lc-date">April 1,2019</div>
@@ -231,7 +231,7 @@
       <div class="col-lg-8">
         <div class="small-blog-list">
           <div class="sb-item">
-            <img src="img/blog-thumbs/6.jpg" alt="">
+            <img src="<?php echo base_url('img/blog-thumbs/6.jpg');?>" alt="">
             <div class="sb-text">
               <div class="sb-date">April 1,2019</div>
               <h6>10 Amazing new games</h6>
@@ -244,7 +244,7 @@
             </div>
           </div>
           <div class="sb-item">
-            <img src="img/blog-thumbs/7.jpg" alt="">
+            <img src="<?php echo base_url('img/blog-thumbs/7.jpg');?>" alt="">
             <div class="sb-text">
               <div class="sb-date">April 1,2019</div>
               <h6>10 Amazing new games</h6>
@@ -257,7 +257,7 @@
             </div>
           </div>
           <div class="sb-item">
-            <img src="img/blog-thumbs/8.jpg" alt="">
+            <img src="<?php echo base_url('img/blog-thumbs/8.jpg');?>" alt="">
             <div class="sb-text">
               <div class="sb-date">April 1,2019</div>
               <h6>10 Amazing new games</h6>
@@ -270,7 +270,7 @@
             </div>
           </div>
           <div class="sb-item">
-            <img src="img/blog-thumbs/9.jpg" alt="">
+            <img src="<?php echo base_url('img/blog-thumbs/9.jpg');?>" alt="">
             <div class="sb-text">
               <div class="sb-date">April 1,2019</div>
               <h6>10 Amazing new games</h6>
@@ -290,7 +290,7 @@
           <div class="latest-news-widget top-five">
             <div class="ln-item">
               <div class="ln-index">01</div>
-              <img src="img/blog-thumbs/1.jpg" alt="">
+              <img src="<?php echo base_url('img/blog-thumbs/1.jpg');?>" alt="">
               <div class="ln-text">
                 <div class="ln-date">April 1, 2019</div>
                 <h6>10 Amazing new games</h6>
@@ -303,7 +303,7 @@
             </div>
             <div class="ln-item">
               <div class="ln-index">02</div>
-              <img src="img/blog-thumbs/2.jpg" alt="">
+              <img src="<?php echo base_url('img/blog-thumbs/2.jpg');?>" alt="">
               <div class="ln-text">
                 <div class="ln-date">April 1, 2019</div>
                 <h6>10 Amazing new games</h6>
@@ -316,7 +316,7 @@
             </div>
             <div class="ln-item">
               <div class="ln-index">03</div>
-              <img src="img/blog-thumbs/3.jpg" alt="">
+              <img src="<?php echo base_url('img/blog-thumbs/3.jpg');?>" alt="">
               <div class="ln-text">
                 <div class="ln-date">April 1, 2019</div>
                 <h6>10 Amazing new games</h6>
@@ -329,7 +329,7 @@
             </div>
             <div class="ln-item">
               <div class="ln-index">04</div>
-              <img src="img/blog-thumbs/4.jpg" alt="">
+              <img src="<?php echo base_url('img/blog-thumbs/4.jpg');?>" alt="">
               <div class="ln-text">
                 <div class="ln-date">April 1, 2019</div>
                 <h6>10 Amazing new games</h6>
@@ -342,7 +342,7 @@
             </div>
             <div class="ln-item">
               <div class="ln-index">05</div>
-              <img src="img/blog-thumbs/5.jpg" alt="">
+              <img src="<?php echo base_url('img/blog-thumbs/5.jpg');?>" alt="">
               <div class="ln-text">
                 <div class="ln-date">April 1, 2019</div>
                 <h6>10 Amazing new games</h6>
