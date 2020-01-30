@@ -342,7 +342,7 @@
             </div>
             <div class="ln-item">
               <div class="ln-index">05</div>
-              <img src="<?php echo base_url('img/blog-thumbs/5.jpg');?>" alt="">
+              <img src="<?php echo base_url('img/blog-thumbs/5.jpg');?>" alt="...........">
               <div class="ln-text">
                 <div class="ln-date">April 1, 2019</div>
                 <h6>10 Amazing new games</h6>
