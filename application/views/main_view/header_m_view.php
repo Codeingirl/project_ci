@@ -14,7 +14,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
 
 	<!-- Stylesheets -->
-	<?php echo link_tag('css/bootstrap.min.css') ;?>
+	<?php echo link_tag('1css/bootstrap.min.css') ;?>
 	<?php echo link_tag('css/font-awesome.min.css') ;?>
 	<?php echo link_tag('ccss/magnific-popup.css') ;?>
 	<?php echo link_tag('css/owl.carousel.min.css') ;?>
