@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>TheQuest - Gaming Magazine Template</title>
+	<title>GAMING MATE</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="TheQuest Gaming Magazine Template">
 	<meta name="keywords" content="gaming, html">

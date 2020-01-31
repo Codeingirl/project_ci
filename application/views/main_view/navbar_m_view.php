@@ -7,7 +7,7 @@
 	<!-- Header section -->
 	<header class="header-section">
 		<a href="index.html" class="site-logo">
-			<img src="<?php echo base_url('img/logo-2.png');?>" alt="logo" >
+			<img src="<?php echo base_url('img/logo.png');?>" alt="logo" >
 		</a>
 		<ul class="main-menu">
 			<li><a href="index.html">Home</a></li>
