@@ -10,12 +10,12 @@
 			<img src="<?php echo base_url('img/logo.png');?>" alt="logo" >
 		</a>
 		<ul class="main-menu">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="characters.html">Characters</a></li>
+			<li><a href="<?php echo site_url('Mainpage') ?>">Home</a></li>
 			<li><a href="game.html">Games</a></li>
 			<li><a href="reviews.html">Reviews</a></li>
 			<li><a href="news.html">News</a></li>
-			<li><a href="single-post.html">Page</a></li>
+			<li><a href="<?php echo site_url('Mainpage/sign_in') ?>">Sign In</a></li>
+			<li><a href="<?php echo site_url('register/login') ?>">Log in</a></li>
 		</ul>
 		<!-- <div class="header-add">
 			<img src="<?php// echo base_url('img/add.jpg');?>" alt="">
