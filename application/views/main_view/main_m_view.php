@@ -5,8 +5,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
-            <h2>Enter the Battle</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+            <h2>1111111</h2>
+            <p>222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 </p>
             <a href="#" class="site-btn">Read More</a>
           </div>
         </div>
@@ -16,8 +16,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
-            <h2>Enter the Battle</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+            <h2>333333333333333</h2>
+            <p>444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444 </p>
             <a href="#" class="site-btn">Read More</a>
           </div>
         </div>
@@ -35,13 +35,13 @@
         <div class="blog-post featured-post">
           <img src="<?php echo base_url('img/blog/1.jpg'); ?>" alt="">
           <div class="post-date">April 1, 2019</div>
-          <h3>The best games of 2019</h3>
+          <h3>555555555555555</h3>
           <div class="post-metas">
             <div class="post-meta">By Admin</div>
             <div class="post-meta">in <a href="#">Games</a></div>
             <div class="post-meta">3 Comments</div>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Fusce urna quam, euismod sit amet mollis quis, vestibulum quis velit. Morbi id dictum quam, ut commodo lorem. In at nisi nec arcu porttitor aliquet vitae at dui. </p>
+          <p>6666666666666666666666666666666666666666666666666 </p>
           <a href="#" class="site-btn">Read More</a>
         </div>
         <div class="row">
