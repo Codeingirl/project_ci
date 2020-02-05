@@ -7,7 +7,7 @@
 	<script src="<?php echo base_url('js/circle-progress.min.js'); ?>"></script>
 	<script src="<?php echo base_url('js/jquery.magnific-popup.min.js'); ?>"></script>
 	<script src="<?php echo base_url('js/main.js'); ?>"></script>
-
+	<!-- JQuery -->
 	</body>
 </html>
 

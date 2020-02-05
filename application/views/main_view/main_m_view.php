@@ -1,7 +1,7 @@
 <!-- Hero section -->
 <section class="hero-section">
   <div class="hero-slider owl-carousel">
-    <div class="hero-item set-bg" data-setbg="img/slider/1.jpg">
+    <div class="hero-item set-bg" data-setbg="<?php echo base_url('img/slider/1.jpg'); ?>">
       <div class="container">
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="hero-item set-bg" data-setbg="img/slider/2.jpg">
+    <div class="hero-item set-bg" data-setbg="<?php echo base_url('img/slider/2.jpg'); ?>">
       <div class="container">
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
@@ -31,7 +31,7 @@
 <section class="blog-section spad">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 blog-posts">
+      <div class="col-lg-12 blog-posts">
         <div class="blog-post featured-post">
           <img src="<?php echo base_url('img/blog/1.jpg'); ?>" alt="">
           <div class="post-date">April 1, 2019</div>
@@ -103,7 +103,7 @@
           </div>
         </div>
       </div>\
-      <div class="col-lg-4 sidebar">
+      <!-- <div class="col-lg-4 sidebar">
         <h2 style="color:#fff;">Add news</h2>
           <div class="form-group">
             <label style="color:#fff;">Headline</label>
@@ -133,7 +133,7 @@
 
 
 
-      </div>
+      </div> -->
     </div>
   </div>
 </section>

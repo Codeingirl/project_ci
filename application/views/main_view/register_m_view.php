@@ -19,7 +19,7 @@
 
                       <div class="col-md-6">
                         <input type="text" name="m_name"  required placeholder="Name"></div>
-												
+
 											<div class="col-md-6">
 	            					<input type="password" name="m_password"  required placeholder="Password"></div>
 

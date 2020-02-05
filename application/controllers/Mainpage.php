@@ -37,9 +37,9 @@ class Mainpage extends CI_Controller {
 
 	public function success()
 	{
-
+			$this->load->view('main_view/header_m_view');
   		$this->load->view('main_view/Success_view');
-
+			$this->load->view('main_view/js_m_view');
 
 	}
 
