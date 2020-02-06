@@ -155,7 +155,7 @@ public function adding()
 				if($m_type==1){
 					redirect('admin','refresh');
 				}elseif($m_type==0){
-					redirect('home','refresh');
+					redirect('Mainpage/member','refresh');
 				}
 			}else {
 				$this->session->unset_userdata(array('m_id','m_type','m_name'));

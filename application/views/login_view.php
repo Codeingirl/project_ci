@@ -14,7 +14,7 @@
 				<div class="form-group row">
 					<div class="col-sm-2 control-label"> Password </div>
 					<div class="col-sm-5">
-						<input type="password	" name="m_password" class="form-control" required placeholder="Password"></div>
+						<input type="password" name="m_password" class="form-control" required placeholder="Password"></div>
 				</div>
 
 				<div class="form-group row">
