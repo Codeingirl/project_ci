@@ -86,7 +86,7 @@ public function adding()
 			 }
 
 			 $success = $this->db->insert('tbl_member',$data);
-			 return redirect('home');
+			 return redirect('Mainpage');
 			 }
 	}
 

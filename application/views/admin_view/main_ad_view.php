@@ -62,7 +62,7 @@
                             <th>ID</th>
                             <th>Profile</th>
                             <th>user</th>
-                            <th>password</th>
+                            <!-- <th>password</th> -->
                             <th>name</th>
                             <th>Lastname</th>
                             <th>email</th>
@@ -79,7 +79,7 @@
                                 <img src="<?php echo base_url('img/profile'); ?>/<?php echo $row->m_img; ?>" width="100px">
                               </td>
                               <td><?php echo $row->m_user; ?></td>
-                              <td><?php echo $row->m_password; ?></td>
+                              <!-- <td><?php //echo $row->m_password; ?></td> -->
                               <td><?php echo $row->m_name; ?></td>
                               <td><?php echo $row->m_lname; ?></td>
                               <td><span class="block-email"><?php echo $row->m_email; ?></span></td>
