@@ -5,7 +5,7 @@
 	</div>
 
 	<!-- Header section -->
-	<nav class="header-section">
+	<nav class="header-section" style="height:114px;">
 		<a href="index.html" class="site-logo">
 			<img src="<?php echo base_url('img/logo.png');?>" alt="logo" >
 		</a>
@@ -17,7 +17,7 @@
 			<li><a href="<?php echo site_url('Mainpage/sign_in') ?>">Sign In</a></li>
 			<li><a href="" data-toggle="modal" data-target="#modalLoginForm">Log in</a></li>
 		</ul>
-
+		<form action="<?php echo site_url('register/checklogin2') ?>" method="post">
 		<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 			 aria-hidden="true">
 			 <div class="modal-dialog" role="document">
@@ -31,19 +31,20 @@
 					 <div class="modal-body mx-3">
 						 <div class="md-form mb-5">
 							 <i class="fas fa-envelope prefix grey-text"></i>
-							 <input type="email" id="defaultForm-email" class="form-control validate">
+							 <input type="email" id="defaultForm-email" name="m_email" class="form-control validate">
 							 <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
 						 </div>
 
 						 <div class="md-form mb-4">
 							 <i class="fas fa-lock prefix grey-text"></i>
-							 <input type="password" id="defaultForm-pass" class="form-control validate">
+							 <input type="password" id="defaultForm-pass" name="m_password"class="form-control validate">
 							 <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
 						 </div>
 
 					 </div>
 					 <div class="modal-footer d-flex justify-content-center">
 						 <button class="btn btn-default">Login</button>
+					 </form>
 					 </div>
 				 </div>
 			 </div>

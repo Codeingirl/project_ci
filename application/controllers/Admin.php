@@ -14,9 +14,10 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
+		print_r($_SESSION);
 		$data['query']=$this->member_model->showdata2();
 		$this->load->view('admin_view/css_ad_view');
-		$this->load->view('admin_view/header_ad_view',);
+		$this->load->view('admin_view/header_ad_view2',);
 		$this->load->view('admin_view/main_ad_view',$data);
 		$this->load->view('admin_view/footer_ad_view');
 		$this->load->view('admin_view/js_ad_view');

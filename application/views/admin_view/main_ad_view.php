@@ -11,7 +11,7 @@
           </div>
       </div>
       <div class="row m-t-25">
-        <div class="col-sm-6 col-lg-3">
+        <div class="col-sm-6 col-lg-5">
             <div class="overview-item overview-item--c1">
                 <div class="overview__inner">
                     <div class="overview-box clearfix">
@@ -19,7 +19,7 @@
                             <i class="zmdi zmdi-account-o"></i>
                         </div>
                         <div class="text">
-                            <h2>10368</h2>
+                            <h6><?php echo '<pre>'; ?><?php echo print_r($_SESSION); ?><?php echo '</pre>'; ?></h6>
                             <span>members online</span>
                         </div>
                     </div>
@@ -61,12 +61,9 @@
                           <tr>
                             <th>ID</th>
                             <th>Profile</th>
-                            <th>user</th>
+                            <th>user info</th>
                             <!-- <th>password</th> -->
-                            <th>name</th>
-                            <th>Lastname</th>
                             <th>email</th>
-                            <th>tel</th>
                             <th>type</th>
                             <th>time save</th>
                             <th></th>
@@ -78,12 +75,13 @@
                               <td>
                                 <img src="<?php echo base_url('img/profile'); ?>/<?php echo $row->m_img; ?>" width="100px">
                               </td>
-                              <td><?php echo $row->m_user; ?></td>
-                              <!-- <td><?php //echo $row->m_password; ?></td> -->
-                              <td><?php echo $row->m_name; ?></td>
-                              <td><?php echo $row->m_lname; ?></td>
+                              <td>
+                                <span class="status--process">Username: </span><?php echo $row->m_user; ?><br>
+                                <span class="status--process">Firstname: </span><?php echo $row->m_name; ?><br>
+                                <span class="status--process">Lastname: </span> <?php echo $row->m_lname;?><br>
+                                <span class="status--process">Tel: </span><?php echo $row->m_tel; ?>
+                              </td>
                               <td><span class="block-email"><?php echo $row->m_email; ?></span></td>
-                              <td><?php echo $row->m_tel; ?></td>
                               <td><span class="status--process"><?php echo $row->m_typename; ?></span></td>
                               <td><?php echo $row->datesave; ?></td>
                               <td>

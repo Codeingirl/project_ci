@@ -9,6 +9,7 @@ class Register extends CI_Controller {
         $this->load->model('member_model');
 				 $this->load->model('Register_model');
          $this->load->model('Login_model');
+				 $this->session->keep_flashdata('message');
   }
 
 //-----------------------------------------//
@@ -60,7 +61,7 @@ public function adding()
 
 	if ($this->Register_model->addmember($m_email))
 	{
-		 $this->session->set_flashdata('msg','ขออภัย E-mail นี้มีผู้อื่นใช้แล้ว กรุณาลองใหม่อีกครั้ง');
+		 $this->session->flashdata('msg','ขออภัย E-mail นี้มีผู้อื่นใช้แล้ว กรุณาลองใหม่อีกครั้ง');
 				return redirect('register');
 	}
 	else
@@ -141,7 +142,9 @@ public function adding()
 				$session_user=array(
 						'm_id' 		=> $result->m_id,
 						'm_type'	=> $result->m_type,
-						'm_name'	=> $result->m_name
+						'm_name'	=> $result->m_name,
+						'm_email'	=> $result->m_email,
+						'm_img'	=>  $result->m_img
 				);
 				// echo '<br>';
 				//print_r{$session_user};
