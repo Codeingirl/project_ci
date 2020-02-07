@@ -38,8 +38,22 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="chart.html">
+                            <a href="<?php echo site_url('Admin/blog') ;?>">
                                 <i class="fas fa-chart-bar"></i>Blog Manager</a>
+                                <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                    <li>
+                                        <a href="index.html">แก้ไขรหัสผ่าน</a>
+                                    </li>
+                                    <li>
+                                        <a href="index2.html">แก้ไขรูปโปรไฟล์</a>
+                                    </li>
+                                    <li>
+                                        <a href="index3.html">แก้ไขข้อมูลUser</a>
+                                    </li>
+                                    <li>
+                                        <a href="index4.html">แก้ไขสิทธิ์การใช้งาน</a>
+                                    </li>
+                                </ul>
                         </li>
                     </ul>
                 </div>
@@ -76,7 +90,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="chart.html">
+                            <a href="<?php echo site_url('Admin/blog') ;?>">
                                 <i class="fas fa-chart-bar"></i>Blog Manager</a>
                         </li>
 

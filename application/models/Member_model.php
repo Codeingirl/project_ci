@@ -168,6 +168,36 @@ public function fetch_user_login($m_email,$m_password)
           $query = $this->db->get('tbl_member');
           return $query->row();
         }
+//-------------------------------------//
+public function blogjoin()
+        {
+              $this->db->select('tbl_blog.*,tbl_blogtype.*,tbl_member.*');
+              $this->db->from('tbl_blog');
+              $this->db->join('tbl_blogtype','tbl_blog.blog_type = tbl_blogtype.blog_type');
+              $this->db->join('tbl_member','tbl_member.m_id = tbl_blog.m_id');
+
+              $query = $this->db->get();
+              return $query->result();
+        }
+
+//---------------------------------------//
+public function read_blog($blog_id)
+        {
+              $this->db->select('*');
+              $this->db->from('tbl_blog');
+              $this->db->where('blog_id',$blog_id);
+              $query = $this->db->get();
+              if($query->num_rows() > 0){
+                      $data = $query->row();
+                      return $data;
+              }
+              return FALSE;
+        }
+//-------------------------------------------//
+public function blog_delete($blog_id)
+      {
+        $this->db->delete('tbl_blog',array('blog_id'=>$blog_id));
+      }
 
 }
 

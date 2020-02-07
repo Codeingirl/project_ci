@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard 3</title>
+    <title>Admin section</title>
 
     <!-- Fontfaces CSS-->
     <?php echo link_tag('css/admin_css/css/font-face.css');?>
@@ -34,7 +34,7 @@
     <!-- Main CSS-->
     <?php echo link_tag('css/admin_css/css/theme.css');?>
 
-    
+
 
 
 </head>
