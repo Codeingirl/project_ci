@@ -45,7 +45,7 @@ class Mainpage extends CI_Controller {
 	public function nav()
 	{
 			$this->load->view('main_view/header_m_view');
-  		$this->load->view('main_view/homelogin_m_view.php');
+  		$this->load->view('main_view/lnadmin_m_view.php');
 			$this->load->view('main_view/js_m_view');
 
 	}
