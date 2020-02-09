@@ -5,7 +5,7 @@
 	</div>
 
 	<!-- Header section -->
-	<nav class="header-section" style="height:114px;">
+	<nav class="header-section" style="height:110px;">
 		<a href="index.html" class="site-logo">
 			<img src="<?php echo base_url('img/logo.png');?>" alt="logo" >
 		</a>
@@ -14,16 +14,15 @@
 			<li><a href="game.html">Games</a></li>
 			<li><a href="reviews.html">Reviews</a></li>
 			<li><a href="news.html">News</a></li>
-			<li><a href="<?php echo site_url('Mainpage/sign_in') ?>">Sign In</a></li>
-			<li><a href="" data-toggle="modal" data-target="#modalLoginForm">Log in</a></li>
 		</ul>
+		<!-- Login form js -->
 		<form action="<?php echo site_url('register/checklogin2') ?>" method="post">
 		<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 			 aria-hidden="true">
 			 <div class="modal-dialog" role="document">
 				 <div class="modal-content">
 					 <div class="modal-header text-center">
-						 <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+						 <h4 class="modal-title w-100 font-weight-bold">Login</h4>
 						 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							 <span aria-hidden="true">&times;</span>
 						 </button>
@@ -45,12 +44,16 @@
 					 <div class="modal-footer d-flex justify-content-center">
 						 <button class="btn btn-default">Login</button>
 					 </form>
+ <!-- Login form js -->
 					 </div>
 				 </div>
 			 </div>
 			</div>
 
-		<!-- <div class="header-add">
-			<img src="<?php// echo base_url('img/add.jpg');?>" alt="">
-		</div> -->
+		<div class="header-add">
+			<ul class="main-menu">
+				<li><a href="<?php echo site_url('Mainpage/sign_in') ?>">Sign In</a></li>
+				<li><a href="" data-toggle="modal" data-target="#modalLoginForm">Log in</a></li>
+			</ul>
+		</div>
 	</nav>

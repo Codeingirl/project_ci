@@ -20,17 +20,20 @@
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                       <li class="has-sub">
-                            <a class="js-arrow" href="#">
+                            <a class="js-arrow" href="">
                                 <i class="fas fa-tachometer-alt"></i>Member Manager</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                              <li>
+                                  <a href="<?php echo site_url('Admin') ?>">ข้อมูลผู้ใช้งาน</a>
+                              </li>
                                 <li>
-                                    <a href="index.html">แก้ไขรหัสผ่าน</a>
+                                    <a href="<?php echo site_url('Admin/edit_password/')?><?php echo $_SESSION['m_id'] ?> ">แก้ไขรหัสผ่าน</a>
                                 </li>
                                 <li>
-                                    <a href="index2.html">แก้ไขรูปโปรไฟล์</a>
+                                    <a href="<?php echo site_url('Admin/edit_img/')?><?php echo $_SESSION['m_id'] ?>">แก้ไขรูปโปรไฟล์</a>
                                 </li>
                                 <li>
-                                    <a href="index3.html">แก้ไขข้อมูลUser</a>
+                                    <a href="<?php echo site_url('Admin/edit_data/') ?><?php echo $_SESSION['m_id'] ?>">แก้ไขข้อมูลUser</a>
                                 </li>
                                 <li>
                                     <a href="index4.html">แก้ไขสิทธิ์การใช้งาน</a>
@@ -75,14 +78,17 @@
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-tachometer-alt"></i>Member Manager</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                              <li>
+                                  <a href="<?php echo site_url('Admin') ?>">ข้อมูลผู้ใช้งาน</a>
+                              </li>
                                 <li>
-                                    <a href="index.html">แก้ไขรหัสผ่าน</a>
+                                    <a href="<?php echo site_url('Admin/edit_password/')?><?php echo $_SESSION['m_id'] ?> ">แก้ไขรหัสผ่าน</a>
                                 </li>
                                 <li>
-                                    <a href="index2.html">แก้ไขรูปโปรไฟล์</a>
+                                    <a href="<?php echo site_url('Admin/edit_img/')?><?php echo $_SESSION['m_id'] ?>">แก้ไขรูปโปรไฟล์</a>
                                 </li>
                                 <li>
-                                    <a href="index3.html">แก้ไขข้อมูลUser</a>
+                                    <a href="<?php echo site_url('Admin/edit_data/') ?><?php echo $_SESSION['m_id'] ?>">แก้ไขข้อมูลUser</a>
                                 </li>
                                 <li>
                                     <a href="index4.html">แก้ไขสิทธิ์การใช้งาน</a>
@@ -93,7 +99,6 @@
                             <a href="<?php echo site_url('Admin/blog') ;?>">
                                 <i class="fas fa-chart-bar"></i>Blog Manager</a>
                         </li>
-
                             </ul>
                         </li>
                     </ul>
@@ -138,8 +143,18 @@
                                                     <span class="email"><?php echo $_SESSION['m_email']; ?></span>
                                                 </div>
                                             </div>
+                                            <div class="account-dropdown__body">
+                                              <div class="account-dropdown__item">
+                                                  <a href="<?php echo site_url('Admin') ?>">
+                                                      <i class="zmdi zmdi-account"></i>Admin Section</a>
+                                              </div>
+                                              <div class="account-dropdown__item">
+                                                  <a href="<?php echo site_url('Mainpage/admin') ?>">
+                                                      <i class="zmdi zmdi-settings"></i>Main Page</a>
+                                              </div>
+                                            </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="#">
+                                                <a href="<?php echo site_url('Member/logout') ?>">
                                                     <i class="zmdi zmdi-power"></i>Logout</a>
                                             </div>
                                         </div>

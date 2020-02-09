@@ -58,7 +58,7 @@ public function logout()
 {
 		$this->session->sess_destroy();//ล้างsession
 
-		redirect('Register/login');//กลับไปหน้า Login
+		redirect('Mainpage');//กลับไปหน้า Login
 }
 //-----------------------------//
 

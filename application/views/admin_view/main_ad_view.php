@@ -86,9 +86,9 @@
                               <td><?php echo $row->datesave; ?></td>
                               <td>
                                   <div class="table-data-feature">
-                                      <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                          <a href="<?php echo site_url('admin/edit_admin/').$row->m_id; ?>"><i class="zmdi zmdi-edit"></i>
-                                      </button></a>
+                                      <!-- <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                          <a href="<?php //echo site_url('admin/edit_admin/').$row->m_id; ?>"><i class="zmdi zmdi-edit"></i>
+                                      </button></a> -->
                                       <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
                                           <a href="<?php echo site_url('admin/delete/').$row->m_id; ?>" onclick="return confirm('confirm to delete');"><i class="zmdi zmdi-delete"></i>
                                       </button></a>

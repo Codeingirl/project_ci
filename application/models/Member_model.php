@@ -198,6 +198,146 @@ public function blog_delete($blog_id)
       {
         $this->db->delete('tbl_blog',array('blog_id'=>$blog_id));
       }
+//-----------------------------------------------//
+
+public function edit_password()
+{
+  // echo '<pre>';
+  // print_r($_POST);
+  // echo '</pre>';
+  // exit;
+
+
+	$m_password          = $this->input->post('m_password');
+	$m_confirmpassword   = $this->input->post('m_confirmpassword');
+
+  if ($m_password == $m_confirmpassword)
+  {
+   $data = array
+   (
+
+    'm_password'=>sha1($m_password),
+
+   );
+  }
+  else
+  {
+    $this->session->set_flashdata('msg','ยืนยันรหัสผ่านไม่ตรงกัน กรุณาลองใหม่อีกครั้ง');
+   return redirect('register');
+  }
+
+  $this->db->where('m_id',$this->input->post('m_id'));
+  $query = $this->db->update('tbl_member',$data);
+
+  if($query){
+    redirect('Admin');
+  }else {
+    echo 'Edit false';
+  }
+}
+//---------------------------------------------------------------------------//
+public function edit_img()
+{
+  $config['upload_path'] = './img/profile/';
+  $config['allowed_types'] = 'gif|jpg|png';
+  $config['max_size'] = '2000';
+  $config['max_width'] = '3000';
+  $config['max_heigth'] = '3000';
+
+  $this->load->library('upload',$config);
+  if (! $this->upload->do_upload('m_img'))
+  {
+      echo $this->upload->display_errors();
+  }else {
+    $data = $this->upload->data();
+    $filename = $data['file_name'];
+  // echo '<pre>';
+  // print_r($_POST);
+  // echo '</pre>';
+  // exit;
+   $data = array
+   ('m_img' => $filename);
+
+
+  $this->db->where('m_id',$this->input->post('m_id'));
+  $query = $this->db->update('tbl_member',$data);
+
+  if($query){
+    redirect('Admin');
+  }else {
+    echo 'Edit false';
+      }
+
+      }
+    }
+//----------------------------------------------------------------------//
+public function edit_data()
+{
+  // echo '<pre>';
+  // print_r($_POST);
+  // echo '</pre>';
+  // exit;
+  $m_user        = $this->input->post('m_user');
+  $m_name         = $this->input->post('m_name');
+  $m_lname         = $this->input->post('m_lname');
+  $m_tel            = $this->input->post('m_tel');
+
+   $data = array
+   (
+    'm_user'=> $m_user,
+    'm_name'=> $m_name,
+    'm_lname'=> $m_lname,
+    'm_tel'  => $m_tel
+   );
+
+
+  $this->db->where('m_id',$this->input->post('m_id'));
+  $query = $this->db->update('tbl_member',$data);
+
+  if($query){
+    redirect('Admin');
+  }else {
+    echo 'Edit false';
+  }
+
+
+  }
+//------------------------------------------------------------------//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 

@@ -17,7 +17,7 @@ class Admin extends CI_Controller {
 		//print_r($_SESSION);
 		$data['query']=$this->member_model->showdata2();
 		$this->load->view('admin_view/css_ad_view');
-		$this->load->view('admin_view/header_ad_view2',);
+		$this->load->view('admin_view/header_ad_view2');
 		$this->load->view('admin_view/main_ad_view',$data);
 		$this->load->view('admin_view/footer_ad_view');
 		$this->load->view('admin_view/js_ad_view');
@@ -47,8 +47,8 @@ class Admin extends CI_Controller {
 		//print_r($_SESSION);
 		$data['query']=$this->member_model->blogjoin();
 		$this->load->view('admin_view/css_ad_view');
-		$this->load->view('admin_view/header_ad_view2',);
-		$this->load->view('admin_view/blog_ad_view',$data);
+		$this->load->view('admin_view/header_ad_view2',$data);
+		$this->load->view('admin_view/blog/blog_ad_view',$data);
 		$this->load->view('admin_view/footer_ad_view');
 		$this->load->view('admin_view/js_ad_view');
 	}
@@ -57,7 +57,7 @@ class Admin extends CI_Controller {
 	{
 		$this->load->view('admin_view/css_ad_view');
 		$this->load->view('admin_view/header_ad_view2',);
-		$this->load->view('admin_view/blog_form_ad_view');
+		$this->load->view('admin_view/blog/blog_form_ad_view');
 		$this->load->view('admin_view/footer_ad_view');
 		$this->load->view('admin_view/js_ad_view');
 	}
@@ -108,7 +108,7 @@ class Admin extends CI_Controller {
 
 		$this->load->view('admin_view/css_ad_view');
 		$this->load->view('admin_view/header_ad_view2',);
-		$this->load->view('admin_view/blog_edit_ad_view',$data);
+		$this->load->view('admin_view/blog/blog_edit_ad_view',$data);
 		$this->load->view('admin_view/footer_ad_view');
 		$this->load->view('admin_view/js_ad_view');
 		// echo '<pre>';
@@ -172,6 +172,35 @@ class Admin extends CI_Controller {
 		$this->member_model->blog_delete($blog_id);
 		redirect('Admin/blog','refresh');
 	}
-
+//------------------------------------------------------------//
+public function edit_password($m_id)
+{
+	$data['rowedit']=$this->member_model->read($m_id);
+	$this->load->view('admin_view/css_ad_view');
+	$this->load->view('admin_view/header_ad_view2');
+	$this->load->view('admin_view/edit_password_ad_view');
+	$this->load->view('admin_view/footer_ad_view');
+	$this->load->view('admin_view/js_ad_view');
+}
+//--------------------------------------------------------------//
+public function edit_img($m_id)
+{
+	$data['rowedit']=$this->member_model->read($m_id);
+	$this->load->view('admin_view/css_ad_view');
+	$this->load->view('admin_view/header_ad_view2');
+	$this->load->view('admin_view/edit_img_ad_view');
+	$this->load->view('admin_view/footer_ad_view');
+	$this->load->view('admin_view/js_ad_view');
+}
+//------------------------------------------------------------------//
+public function edit_data($m_id)
+{
+	$data['rowedit']=$this->member_model->read($m_id);
+	$this->load->view('admin_view/css_ad_view');
+	$this->load->view('admin_view/header_ad_view2');
+	$this->load->view('admin_view/edit_data_ad_view',$data);
+	$this->load->view('admin_view/footer_ad_view');
+	$this->load->view('admin_view/js_ad_view');
+}
 
 }

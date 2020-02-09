@@ -105,12 +105,6 @@ public function adding()
 
 //-----------------------------------------//
 
-	// public function adding()
-	// {
-	// 			$this->member_model->addmember();
-	//
-	// }
-//---------------------------------------------//
 	public function login()
 	{
 				$this->load->view('css');
@@ -216,6 +210,50 @@ public function adding()
 		$this->member_model->editmember();
 	}
 //-------------------------------------------------//
+	public function edit_password()
+	{
+
+		$this->member_model->edit_password();
+	}
+//------------------------------------------------------//
+	public function edit_img()
+	{
+
+		$this->member_model->edit_img();
+	}
+//--------------------------------------------------------//
+public function edit_data()
+{
+	// echo '<pre>';
+	// print_r($_POST);
+	// echo '</pre>';
+	// exit;
+	$this->member_model->edit_data();
+}
+//------------------------------------------//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

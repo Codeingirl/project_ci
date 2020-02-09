@@ -3,6 +3,7 @@
 
 <head>
     <!-- Required meta tags-->
+    <script src="https://cdn.ckeditor.com/ckeditor5/16.0.0/classic/ckeditor.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="au theme template">
@@ -33,7 +34,6 @@
 
     <!-- Main CSS-->
     <?php echo link_tag('css/admin_css/css/theme.css');?>
-
 
 
 
