@@ -156,7 +156,7 @@ public function adding()
 				}
 			}else {
 				$this->session->unset_userdata(array('m_id','m_type','m_name'));
-				redirect('Register');
+				redirect('Mainpage');
 			}
 
 		}
@@ -191,12 +191,12 @@ public function adding()
 					else
 					{
 							$this->session->set_flashdata('error', '<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-triangle"></i> กรุณากรอก Email หรือ Password ให้ถูกต้อง !! </div>');
-							redirect('Register/login','refresh');
+							redirect('Mainpage','refresh');
 					}
 			}
 			else
 			{
-					redirect('Register/login','refresh');
+					redirect('Mainpage','refresh');
 			}
 	}
 
@@ -231,6 +231,40 @@ public function edit_data()
 	$this->member_model->edit_data();
 }
 //------------------------------------------//
+public function edit_type()
+{
+	// echo '<pre>';
+	// print_r($_POST);
+	// echo '</pre>';
+	// exit;
+	$this->member_model->edit_type();
+}
+//------------------------------------------------//
+public function m_edit_img()
+{
+
+	$this->member_model->m_edit_img();
+}
+
+
+//----------------------------------------------//
+public function m_edit_data()
+{
+
+	$this->member_model->m_edit_data();
+}
+
+
+//---------------------------------------------------//
+public function m_edit_password()
+{
+
+	$this->member_model->m_edit_password();
+}
+
+//---------------------------------------------------//
+
+//------------------------------------------------//
 
 
 

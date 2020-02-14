@@ -35,6 +35,9 @@
     <!-- Main CSS-->
     <?php echo link_tag('css/admin_css/css/theme.css');?>
 
+<script src="https://cdn.ckeditor.com/ckeditor5/16.0.0/classic/ckeditor.js"></script>
+<!-- <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script> -->
+
 
 
 </head>

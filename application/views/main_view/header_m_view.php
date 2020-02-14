@@ -21,6 +21,27 @@
 	<?php echo link_tag('css/animate.css') ;?>
 	<?php echo link_tag('css/slicknav.min.css') ;?>
 
+	<?php echo link_tag('css/admin_css/css/font-face.css');?>
+	<?php echo link_tag('css/admin_css/vendor/font-awesome-4.7/css/font-awesome.min.css');?>
+	<?php echo link_tag('css/admin_css/vendor/font-awesome-5/css/fontawesome-all.min.css');?>
+	<?php echo link_tag('css/admin_css/vendor/mdi-font/css/material-design-iconic-font.min.css');?>
+
+	<!-- Bootstrap CSS-->
+	<?php echo link_tag('css/admin_css/vendor/bootstrap-4.1/bootstrap.min.css');?>
+
+	<!-- Vendor CSS-->
+	<?php echo link_tag('css/admin_css/vendor/animsition/animsition.min.css');?>
+	<?php echo link_tag('css/admin_css/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css');?>
+	<?php echo link_tag('css/admin_css/vendor/wow/animate.css');?>
+	<?php echo link_tag('css/admin_css/vendor/css-hamburgers/hamburgers.min.css');?>
+	<?php echo link_tag('css/admin_css/vendor/slick/slick.css');?>
+	<?php echo link_tag('css/admin_css/vendor/select2/select2.min.css');?>
+	<?php echo link_tag('css/admin_css/vendor/perfect-scrollbar/perfect-scrollbar.css');?>
+
+
+	<!-- Main CSS-->
+	<?php echo link_tag('css/admin_css/css/theme.css');?>
+
 	<!-- Main Stylesheets -->
 	<?php echo link_tag('css/style.css') ;?>
 	<!-- Font Awesome -->
@@ -30,8 +51,7 @@
 	<!-- Bootstrap core CSS -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Material Design Bootstrap -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" rel="stylesheet">
-
+	<script src="https://cdn.ckeditor.com/ckeditor5/16.0.0/classic/ckeditor.js"></script>
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>

@@ -32,14 +32,24 @@
                          <div class="col-lg-12">
                              <div class="card">
                                  <div class="card-header">
-                         <div class="row form-group">
-                             <div class="col col-md-3">
-                                 <label for="textarea-input" class=" form-control-label" >รายละเอียดบทความ</label>
-                             </div>
-                             <div class="col-12 col-md-9">
-                                 <textarea id="blog_details" name="blog_details" rows="9"  class="form-control"  value=""><?php echo $rowedit->blog_details;?></textarea>
-                             </div>
-                         </div>
+                                     <div class="row form-group">
+                                         <div class="col col-md-3">
+                                             <label for="textarea-input" class=" form-control-label" >รายละเอียดบทความ</label>
+                                         </div>
+                                         <div class="col-12 col-md-9">
+                                             <textarea id="blog_details" name="blog_details" rows="9"  class="form-control"  value=""><?php echo $rowedit->blog_details;?></textarea>
+                                         </div>
+                                         <script>
+                                                 ClassicEditor
+                                                         .create( document.querySelector( '#blog_details' ) )
+                                                         .then( editor => {
+                                                                 console.log( editor );
+                                                         } )
+                                                         .catch( error => {
+                                                                 console.error( error );
+                                                         } );
+                                         </script>
+                                     </div>
                                </div>
                              </div>
                          </div>
