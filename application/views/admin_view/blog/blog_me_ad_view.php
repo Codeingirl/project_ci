@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="table-data__tool-right">
-              <a href="<?php echo site_url('Mainpage/add_blog_member')?>">
+              <a href="<?php echo site_url('Admin/blog_form_register')?>">
                 <button class="au-btn-icon btn btn-success au-btn--small">
                     <i class="zmdi zmdi-plus"></i>เพิ่มข้อมูล</button></a>
             </div>
@@ -66,10 +66,10 @@
                         <td>
                             <div class="table-data-feature">
                                 <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                    <a href="<?php echo site_url('Mainpage/blog_edit/').$row->blog_id; ?>"><i class="zmdi zmdi-edit"></i>
+                                    <a href="<?php echo site_url('Admin/blog_edit/').$row->blog_id; ?>"><i class="zmdi zmdi-edit"></i>
                                 </button>
                                 <button  class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                      <a href="<?php echo site_url('Mainpage/blog_delete/').$row->blog_id;?>" onclick="return confirm('confirm to delete');"><i class="zmdi zmdi-delete"></i></a>
+                                      <a href="<?php echo site_url('Admin/blog_delete/').$row->blog_id;?>" onclick="return confirm('confirm to delete');"><i class="zmdi zmdi-delete"></i></a>
                                 </button>
                             </div>
                         </td>

@@ -1,4 +1,4 @@
-<br><br><br><br>
+<br><br>
 <div class="container">
 
 
@@ -6,7 +6,7 @@
     <div class="col-md-12">
         <!-- DATA TABLE -->
         <br><br><br>
-        <h1 class="title-5 m-b-35">My Blog</h1>
+        <h3 class="title-5 m-b-35">Comment Manager</h3>
         <div class="table-data__tool">
             <div class="table-data__tool-left">
                 <div class="rs-select2--light rs-select2--md" hidden>
@@ -26,21 +26,26 @@
                     <div class="dropDownSelect2"></div>
                 </div>
             </div>
-            <div class="table-data__tool-right">
-              <a href="<?php echo site_url('Mainpage/add_blog_member')?>">
-                <button class="au-btn-icon btn btn-success au-btn--small">
-                    <i class="zmdi zmdi-plus"></i>เพิ่มข้อมูล</button></a>
-            </div>
         </div>
+
+
+
+              <?php foreach ($query2 as $row2) {?>
+              <img class="card-img-top" src="<?php echo base_url('img/blog/'); ?>/<?php echo $row2->blog_img; ?>" alt="Card image cap" style="width: 25%;">
+              <div class="card-block">
+                <br>
+                <h4 class="card-title"><?php echo $row2->blog_name; ?></h4>
+              </div>
+            <?php } ?>
+
+
         <div class="table-responsive table-responsive-data2">
             <table class="table table-data2">
                 <thead>
                     <tr>
-                        <th>ชื่อบทความ</th>
-                        <th>หมวดหมู่บทความ</th>
-                        <th>วันที่โพสต์</th>
-                        <th>โพสต์โดย</th>
-                        <th>รูปภาพบทความ</th>
+                        <th>ข้อความคอมเม้นท์</th>
+                        <th>ผู้โพส</th>
+                        <th>เวลา</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -49,27 +54,18 @@
                     <tr class="spacer"></tr>
                     <tr class="tr-shadow">
                         <td>
-                          <?php echo $row->blog_name; ?>
+                          <?php echo $row->comment_details; ?>
                         </td>
                         <td class="desc">
-                          <?php echo $row->blog_type_name; ?>
+                          <?php echo $row->comment_name; ?>
                         </td>
                         <td>
-                            <span class="block-email"><?php echo $row->blog_date; ?></span>
-                        </td>
-                        <td>
-                            <span class="status--process"><?php echo $row->m_name; ?></span>
-                        </td>
-                        <td>
-                            <img src="<?php echo base_url('img/blog/'); ?>/<?php echo $row->blog_img; ?>" width="100px">
+                         <?php echo $row->comment_date; ?>
                         </td>
                         <td>
                             <div class="table-data-feature">
                                 <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                    <a href="<?php echo site_url('Mainpage/blog_edit/').$row->blog_id; ?>"><i class="zmdi zmdi-edit"></i>
-                                </button>
-                                <button  class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                      <a href="<?php echo site_url('Mainpage/blog_delete/').$row->blog_id;?>" onclick="return confirm('confirm to delete');"><i class="zmdi zmdi-delete"></i></a>
+                                    <a href="<?php echo site_url('Admin/comment_delete/').$row->comment_id; ?>"><i class="zmdi zmdi-edit"></i>
                                 </button>
                             </div>
                         </td>

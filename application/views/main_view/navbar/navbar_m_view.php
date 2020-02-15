@@ -52,7 +52,7 @@
 
 		<div class="header-add">
 			<ul class="main-menu"style="background: #222222;">
-				<li><a href="<?php echo site_url('Mainpage/sign_in') ?>">Sign in</a></li>
+				<li><a href="<?php echo site_url('Home/sign_in') ?>">Sign in</a></li>
 				<li><a href="" data-toggle="modal" data-target="#modalLoginForm">Log in</a></li>
 			</ul>
 		</div>

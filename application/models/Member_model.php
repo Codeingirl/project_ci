@@ -424,6 +424,19 @@ public function blog_join($blog_id)
               $query = $this->db->get();
               return $query->result();
         }
+//-----------------------------------------------------------------------//
+public function comment_join($blog_id)
+        {
+              $this->db->select('tbl_blog.*,tbl_blogtype.*,tbl_member.*,tbl_comment.*');
+              $this->db->from('tbl_blog');
+              $this->db->join('tbl_blogtype','tbl_blog.blog_type = tbl_blogtype.blog_type');
+              $this->db->join('tbl_member','tbl_member.m_id = tbl_blog.m_id');
+              $this->db->join('tbl_comment','tbl_comment.blog_id = tbl_blog.blog_id');
+              $this->db->order_by('comment_id', 'DESC');
+              $this->db->where('tbl_blog.blog_id',$blog_id);
+              $query = $this->db->get();
+              return $query->result();
+        }
 //----------------------------------------------------------------------//
 public function blogjoin_member($m_id)
     {
@@ -436,7 +449,25 @@ public function blogjoin_member($m_id)
       return $query->result();
     }
 //------------------------------------------------------------------------//
-
+public function comment($blog_id)
+        {
+              $this->db->select('tbl_blog.*,tbl_blogtype.*,tbl_member.*,tbl_comment.*');
+              $this->db->from('tbl_blog');
+              $this->db->join('tbl_blogtype','tbl_blog.blog_type = tbl_blogtype.blog_type');
+              $this->db->join('tbl_member','tbl_member.m_id = tbl_blog.m_id');
+              $this->db->join('tbl_comment','tbl_comment.blog_id = tbl_blog.blog_id');
+              $this->db->order_by('comment_id', 'DESC');
+              $this->db->where('tbl_blog.blog_id',$blog_id);
+              $query = $this->db->get();
+              return $query->result();
+        }
+//--------------------------------------------------------------------------------------------//
+public function comment_delete($comment_id)
+        {
+          {
+            $this->db->delete('tbl_comment',array('comment_id'=>$comment_id));
+          }
+        }
 
 
 

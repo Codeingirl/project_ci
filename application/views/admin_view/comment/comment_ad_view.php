@@ -1,4 +1,4 @@
-<br><br><br><br>
+<br><br>
 <div class="container">
 
 
@@ -6,7 +6,7 @@
     <div class="col-md-12">
         <!-- DATA TABLE -->
         <br><br><br>
-        <h1 class="title-5 m-b-35">My Blog</h1>
+        <h3 class="title-5 m-b-35">Comment Manager</h3>
         <div class="table-data__tool">
             <div class="table-data__tool-left">
                 <div class="rs-select2--light rs-select2--md" hidden>
@@ -26,11 +26,6 @@
                     <div class="dropDownSelect2"></div>
                 </div>
             </div>
-            <div class="table-data__tool-right">
-              <a href="<?php echo site_url('Mainpage/add_blog_member')?>">
-                <button class="au-btn-icon btn btn-success au-btn--small">
-                    <i class="zmdi zmdi-plus"></i>เพิ่มข้อมูล</button></a>
-            </div>
         </div>
         <div class="table-responsive table-responsive-data2">
             <table class="table table-data2">
@@ -41,6 +36,7 @@
                         <th>วันที่โพสต์</th>
                         <th>โพสต์โดย</th>
                         <th>รูปภาพบทความ</th>
+                        <th>แก้ไขคอมเม้น</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -66,10 +62,7 @@
                         <td>
                             <div class="table-data-feature">
                                 <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
-                                    <a href="<?php echo site_url('Mainpage/blog_edit/').$row->blog_id; ?>"><i class="zmdi zmdi-edit"></i>
-                                </button>
-                                <button  class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                      <a href="<?php echo site_url('Mainpage/blog_delete/').$row->blog_id;?>" onclick="return confirm('confirm to delete');"><i class="zmdi zmdi-delete"></i></a>
+                                    <a href="<?php echo site_url('Admin/comment_form/').$row->blog_id; ?>"><i class="zmdi zmdi-edit"></i>
                                 </button>
                             </div>
                         </td>

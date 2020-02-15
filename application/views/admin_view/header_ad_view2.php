@@ -47,6 +47,9 @@
                                 <li>
                                     <a href="<?php echo site_url('Admin/blog') ;?>">ข้อมูล Blog</a>
                                 </li>
+                                <li>
+                                    <a href="<?php echo site_url('Admin/blog_me') ;?>">My Blog</a>
+                                </li>
                               </ul>
                           </li>
                     </ul>
@@ -81,6 +84,7 @@
                                 <li>
                                     <a href="<?php echo site_url('Admin/edit_data/') ?><?php echo $_SESSION['m_id'] ?>">แก้ไขข้อมูลUser</a>
                                 </li>
+
                                 <li>
                                     <a href="<?php echo site_url('Admin/type') ?>">แก้ไขสิทธิ์การใช้งาน</a>
                                 </li>
@@ -93,8 +97,20 @@
                                 <li>
                                     <a href="<?php echo site_url('Admin/blog');?>">ข้อมูล Blog</a>
                                 </li>
+                                <li>
+                                    <a href="<?php echo site_url('Admin/blog_me') ;?>/<?php echo $_SESSION['m_id'] ?>">My Blog</a>
+                                </li>
                               </ul>
                           </li>
+                          <li class="has-sub">
+                                <a class="js-arrow" href="#">
+                                    <i class="fa fa-pencil-square-o"></i>Comment Manager</a>
+                                <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                  <li>
+                                      <a href="<?php echo site_url('Admin/comment');?>">ข้อมูล Blog</a>
+                                  </li>
+                                </ul>
+                            </li>
                             </ul>
                         </li>
                     </ul>

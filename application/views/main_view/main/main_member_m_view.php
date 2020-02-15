@@ -16,7 +16,7 @@
                 <div class="post-meta">in <a href="#"><?php echo $row->blog_type_name; ?></a></div>
                 <div class="post-meta">3 Comments</div>
               </div>
-              <a href="<?php echo site_url('Home/blog_details') ?>/<?php echo $row->blog_id; ?>" class="site-btn">Read More</a>
+              <a href="<?php echo site_url('Mainpage/blog_details') ?>/<?php echo $row->blog_id; ?>" class="site-btn">Read More</a>
             </div>
           </div>
           <?php } ?>
