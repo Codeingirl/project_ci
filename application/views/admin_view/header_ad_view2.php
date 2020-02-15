@@ -52,6 +52,15 @@
                                 </li>
                               </ul>
                           </li>
+                          <li class="has-sub">
+                                <a class="js-arrow" href="#">
+                                    <i class="fa fa-comments"></i>Comment Manager</a>
+                                <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                  <li>
+                                      <a href="<?php echo site_url('Admin/comment');?>">ข้อมูล Comment Blog</a>
+                                  </li>
+                                </ul>
+                            </li>
                     </ul>
                 </div>
             </nav>
@@ -104,10 +113,10 @@
                           </li>
                           <li class="has-sub">
                                 <a class="js-arrow" href="#">
-                                    <i class="fa fa-pencil-square-o"></i>Comment Manager</a>
+                                    <i class="fa fa-comments"></i>Comment Manager</a>
                                 <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                   <li>
-                                      <a href="<?php echo site_url('Admin/comment');?>">ข้อมูล Blog</a>
+                                      <a href="<?php echo site_url('Admin/comment');?>">ข้อมูล Comment Blog</a>
                                   </li>
                                 </ul>
                             </li>

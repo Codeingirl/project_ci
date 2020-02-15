@@ -29,10 +29,14 @@
                                 console.error( error );
                         } );
         </script>
+
         <input id="Comment_userID" name="m_id" type="text" class="form-control" value="<?php echo ($_SESSION['m_id']); ?>" hidden>
         <input id="Comment_userNAME" name="comment_name" type="text" class="form-control" value="<?php echo ($_SESSION['m_name']); ?>" hidden>
+          <?php foreach ($query as $row) {?>
         <input id="Comment_blogID" name="blog_id" type="text" class="form-control" value="<?php echo $row->blog_id; ?>" hidden>
+      <?php } ?>
         <br><br>
+
         <div align="right">
           <!-- <input type="hidden" name="blog_id" value="<?php //echo $rowedit->blog_id;?>"> -->
           <button type="submit" class="site-btn"><i class="fa fa-save">&nbsp;</i>บันทึก</button>

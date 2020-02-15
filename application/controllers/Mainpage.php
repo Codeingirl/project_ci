@@ -133,6 +133,7 @@ class Mainpage extends CI_Controller {
 		// print_r($_SESSION);
 		// echo '</pre>';
 		// exit;
+		$data['query'] = $this->Member_model->blogjoin();
 		$data1['query']=$this->Member_model->blog_join($blog_id);
 		$data['query']=$this->Member_model->comment_join($blog_id);
 		$this->load->view('main_view/header_m_view');
@@ -280,10 +281,10 @@ public function blog_update()
 	}
 //--------------------------------------------------------------------------//
 public function comment_add(){
-	// echo '<pre>';
-	// print_r($_POST);
-	// echo '</pre>';
-	// exit;
+	echo '<pre>';
+	print_r($_POST);
+	echo '</pre>';
+	exit;
 	$data = array(
 		'comment_details' => $this->input->post('comment_details'),
 		'comment_name' => $this->input->post('comment_name'),
@@ -293,7 +294,7 @@ public function comment_add(){
 
 	$query=$this->db->insert('tbl_comment',$data);
 	if($query){
-		redirect('Mainpage/blog_details/'.$data['blog_id'],'refresh');
+		redirect('Mainpage/blog_details/','refresh');
 	}else {
 					echo 'false';
 				}
