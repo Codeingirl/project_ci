@@ -1,3 +1,5 @@
+
+<br><br><br><br>
 <div class="section__content section__content--p30">
   <br><br><br>
     <div class="container-fluid">
@@ -7,7 +9,7 @@
                     <div class="card-header"><i class="fas fa-shopping-cart"></i>  แก้ไขข้อมูลบทความ</div>
                     <div class="card-body">
 
-                        <form action="<?php echo site_url('Admin/blog_update'); ?>" method="post" enctype="multipart/form-data">
+                        <form action="<?php echo site_url('Mainpage/blog_update'); ?>" method="post" enctype="multipart/form-data">
                           <div class="form-group">
                              <label for="blog_name" class="control-label mb-1">ชื่อบทความ</label>
                              <input id="blog_name" name="blog_name" type="text" class="form-control" value="<?php echo $rowedit->blog_name;?>">

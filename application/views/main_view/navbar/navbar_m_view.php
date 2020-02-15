@@ -5,16 +5,16 @@
 	</div>
 
 	<!-- Header section -->
-	<nav class="header-section" style="height:110px;">
-		<a href="index.html" class="site-logo">
-			<img src="<?php echo base_url('img/logo.png');?>" alt="logo" >
+	<nav class="header-section" style="height:110px; background: #222222; position: fixed;">
+		<a href="<?php echo site_url('Mainpage') ?>" class="site-logo">
+			<img src="<?php echo base_url('img/Gaming mate.png');?>" alt="logo" >
 		</a>
-		<ul class="main-menu">
+		<!-- <ul class="main-menu">
 			<li><a href="<?php echo site_url('Mainpage') ?>">Home</a></li>
 			<li><a href="game.html">Games</a></li>
 			<li><a href="reviews.html">Reviews</a></li>
 			<li><a href="news.html">News</a></li>
-		</ul>
+		</ul> -->
 		<!-- Login form js -->
 		<form action="<?php echo site_url('register/checklogin2') ?>" method="post">
 		<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -51,8 +51,8 @@
 			</div>
 
 		<div class="header-add">
-			<ul class="main-menu">
-				<li><a href="<?php echo site_url('Mainpage/sign_in') ?>">Sign In</a></li>
+			<ul class="main-menu"style="background: #222222;">
+				<li><a href="<?php echo site_url('Home/sign_in') ?>">Sign in</a></li>
 				<li><a href="" data-toggle="modal" data-target="#modalLoginForm">Log in</a></li>
 			</ul>
 		</div>

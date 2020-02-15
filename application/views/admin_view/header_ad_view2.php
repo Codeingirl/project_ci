@@ -6,7 +6,7 @@
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="index.html">
-                            <img src="<?php echo base_url('css/admin_css/images/icon/logo.png') ?>" alt="CoolAdmin" />
+                            <img src="<?php echo base_url('img/header-bg/Gaming_Mate.png') ?>" alt="CoolAdmin" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -40,24 +40,27 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="<?php echo site_url('Admin/blog') ;?>">
-                                <i class="fas fa-chart-bar"></i>Blog Manager</a>
+                        <li class="has-sub">
+                              <a class="js-arrow" href="">
+                                  <i class="fas fa-tachometer-alt"></i>Blog Manager</a>
+                              <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="<?php echo site_url('Admin/blog') ;?>">ข้อมูล Blog</a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo site_url('Admin/blog_me') ;?>">My Blog</a>
+                                </li>
+                              </ul>
+                          </li>
+                          <li class="has-sub">
+                                <a class="js-arrow" href="#">
+                                    <i class="fa fa-comments"></i>Comment Manager</a>
                                 <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                    <li>
-                                        <a href="index.html">แก้ไขรหัสผ่าน</a>
-                                    </li>
-                                    <li>
-                                        <a href="index2.html">แก้ไขรูปโปรไฟล์</a>
-                                    </li>
-                                    <li>
-                                        <a href="index3.html">แก้ไขข้อมูลUser</a>
-                                    </li>
-                                    <li>
-                                        <a href="index4.html">แก้ไขสิทธิ์การใช้งาน</a>
-                                    </li>
+                                  <li>
+                                      <a href="<?php echo site_url('Admin/comment');?>">ข้อมูล Comment Blog</a>
+                                  </li>
                                 </ul>
-                        </li>
+                            </li>
                     </ul>
                 </div>
             </nav>
@@ -68,7 +71,7 @@
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="<?php echo base_url('css/admin_css/images/icon/logo.png') ?>" alt="Cool Admin" />
+                    <img src="<?php echo base_url('img/header-bg/Gaming_Mate.png') ?>" alt="Cool Admin" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -76,7 +79,7 @@
                     <ul class="list-unstyled navbar__list">
                       <li class="has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Member Manager</a>
+                                <i class="fa fa-group"></i>Member Manager</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                               <li>
                                   <a href="<?php echo site_url('Admin') ?>">ข้อมูลผู้ใช้งาน</a>
@@ -90,15 +93,33 @@
                                 <li>
                                     <a href="<?php echo site_url('Admin/edit_data/') ?><?php echo $_SESSION['m_id'] ?>">แก้ไขข้อมูลUser</a>
                                 </li>
+
                                 <li>
-                                    <a href="index4.html">แก้ไขสิทธิ์การใช้งาน</a>
+                                    <a href="<?php echo site_url('Admin/type') ?>">แก้ไขสิทธิ์การใช้งาน</a>
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="<?php echo site_url('Admin/blog') ;?>">
-                                <i class="fas fa-chart-bar"></i>Blog Manager</a>
-                        </li>
+                        <li class="has-sub">
+                              <a class="js-arrow" href="#">
+                                  <i class="fa fa-pencil-square-o"></i>Blog Manager</a>
+                              <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="<?php echo site_url('Admin/blog');?>">ข้อมูล Blog</a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo site_url('Admin/blog_me') ;?>/<?php echo $_SESSION['m_id'] ?>">My Blog</a>
+                                </li>
+                              </ul>
+                          </li>
+                          <li class="has-sub">
+                                <a class="js-arrow" href="#">
+                                    <i class="fa fa-comments"></i>Comment Manager</a>
+                                <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                  <li>
+                                      <a href="<?php echo site_url('Admin/comment');?>">ข้อมูล Comment Blog</a>
+                                  </li>
+                                </ul>
+                            </li>
                             </ul>
                         </li>
                     </ul>
