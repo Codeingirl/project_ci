@@ -116,7 +116,6 @@ class Mainpage extends CI_Controller {
 		// print_r($_SESSION);
 		// echo '</pre>';
 		// exit;
-
 			$data1['query']=$this->Member_model->blog_join($blog_id);
 			$data['query']=$this->Member_model->comment_join($blog_id);
   		$this->load->view('main_view/header_m_view');
