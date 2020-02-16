@@ -58,7 +58,7 @@ public function showdata2()
                         $data = $query->row();
                         return $data;
                       }
-                      return false;
+                      $this->session->set_flashdata('register_fail',TRUE);
     }
 //---------------------------------//
 public function editmember()
@@ -72,7 +72,7 @@ public function editmember()
   $this->load->library('upload',$config);
   if (! $this->upload->do_upload('m_img'))
   {
-      echo $this->upload->display_errors();
+      $this->session->set_flashdata('register_img_error',TRUE);;
   }else {
     $data = $this->upload->data();
     $filename = $data['file_name'];
@@ -113,9 +113,9 @@ public function editmember()
   $query = $this->db->update('tbl_member',$data);
 
   if($query){
-    echo 'Edit success';
+    $this->session->set_flashdata('register_success',TRUE);
   }else {
-    echo 'Edit false';
+    $this->session->set_flashdata('register_fail',TRUE);
   }
 
   }
@@ -145,9 +145,9 @@ public function editmember()
       $query = $this->db->update('tbl_member',$data);
 
       if($query){
-        echo 'Edit success';
+        $this->session->set_flashdata('register_success',TRUE);
       }else {
-        echo 'Edit false';
+        $this->session->set_flashdata('register_fail',TRUE);
       }
     }
 //----------------------------------//
@@ -192,7 +192,7 @@ public function read_blog($blog_id)
                       $data = $query->row();
                       return $data;
               }
-              return FALSE;
+              $this->session->set_flashdata('register_fail',TRUE);
         }
 //-------------------------------------------//
 public function blog_delete($blog_id)
@@ -231,9 +231,10 @@ public function edit_password()
   $query = $this->db->update('tbl_member',$data);
 
   if($query){
-    redirect('Admin');
+    $this->session->set_flashdata('register_success',TRUE);
+    redirect('Admin','refresh');
   }else {
-    echo 'Edit false';
+    $this->session->set_flashdata('register_fail',TRUE);
   }
 }
 //---------------------------------------------------------------------------//
@@ -248,7 +249,7 @@ public function edit_img()
   $this->load->library('upload',$config);
   if (! $this->upload->do_upload('m_img'))
   {
-      echo $this->upload->display_errors();
+      $this->session->set_flashdata('register_img_error',TRUE);
   }else {
     $data = $this->upload->data();
     $filename = $data['file_name'];
@@ -264,9 +265,10 @@ public function edit_img()
   $query = $this->db->update('tbl_member',$data);
 
   if($query){
-    redirect('Admin');
+    $this->session->set_flashdata('register_success',TRUE);
+    redirect('Admin','refresh');
   }else {
-    echo 'Edit false';
+    $this->session->set_flashdata('register_fail',TRUE);
       }
 
       }
@@ -296,9 +298,10 @@ public function edit_data()
   $query = $this->db->update('tbl_member',$data);
 
   if($query){
-    redirect('Admin');
+    $this->session->set_flashdata('register_success',TRUE);
+    redirect('Admin','refresh');
   }else {
-    echo 'Edit false';
+    $this->session->set_flashdata('register_fail',TRUE);
   }
 
 
@@ -318,9 +321,10 @@ public function edit_type()
   $query = $this->db->update('tbl_member',$data);
 
   if($query){
+    $this->session->set_flashdata('register_success',TRUE);
     redirect('Admin/type','refresh');
   }else {
-    echo 'Edit false';
+  $this->session->set_flashdata('register_fail',TRUE);
   }
 
 }
@@ -335,7 +339,7 @@ public function m_edit_img(){
   $this->load->library('upload',$config);
   if (! $this->upload->do_upload('m_img'))
   {
-      echo $this->upload->display_errors();
+      $this->session->set_flashdata('register_img_error',TRUE);
   }else {
     $data = $this->upload->data();
     $filename = $data['file_name'];
@@ -351,9 +355,10 @@ public function m_edit_img(){
   $query = $this->db->update('tbl_member',$data);
 
   if($query){
-    redirect('Mainpage/member');
+    $this->session->set_flashdata('register_success',TRUE);
+    redirect('Mainpage/member','refresh');
   }else {
-    echo 'Edit false';
+    $this->session->set_flashdata('register_fail',TRUE);
       }
 
       }
@@ -378,9 +383,10 @@ public function m_edit_data(){
   $query = $this->db->update('tbl_member',$data);
 
   if($query){
-    redirect('Mainpage/member');
+    $this->session->set_flashdata('register_success',TRUE);
+    redirect('Mainpage/member','refresh');
   }else {
-    echo 'Edit false';
+    $this->session->set_flashdata('register_fail',TRUE);
   }
 }
 //--------------------------------------------------------------------//
@@ -399,7 +405,7 @@ public function m_edit_password(){
   }
   else
   {
-    $this->session->set_flashdata('msg','ยืนยันรหัสผ่านไม่ตรงกัน กรุณาลองใหม่อีกครั้ง');
+    $this->session->set_flashdata('register_pass_error',TRUE);
    return redirect('register');
   }
 
@@ -407,9 +413,10 @@ public function m_edit_password(){
   $query = $this->db->update('tbl_member',$data);
 
   if($query){
-    redirect('Mainpage/member');
+    $this->session->set_flashdata('register_success',TRUE);
+    redirect('Mainpage/member','refresh');
   }else {
-    echo 'Edit false';
+    $this->session->set_flashdata('register_fail',TRUE);
   }
 }
 //---------------------------------------------------------------------//

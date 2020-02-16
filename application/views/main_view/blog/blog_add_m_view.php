@@ -20,7 +20,7 @@
                     <div class="col-12 col-md-12">
                         <select name="blog_type" id="select" class="form-control" value="" required>
                             <option >กรุณาเลือก</option>
-                            <option value="101">NewsGame</option>
+                            <option value="101">Game News</option>
                             <option value="102">Tech</option>
                             <option value="103">Esport</option>
                         </select>

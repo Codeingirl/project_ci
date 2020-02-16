@@ -7,7 +7,7 @@
             <br><br>
 						<h3>Sign in</h3>
 						<div class="comments">
-              <form  action="<?php echo site_url('register/adding') ?>" method="post" enctype="multipart/form-data" class="comment-form">
+              <form  action="<?php echo site_url('Register/adding') ?>" method="post" enctype="multipart/form-data" class="comment-form">
               <div class="col-md-6">
                 <input type="file" name="m_img"  accept="img/*"></div>
 
@@ -32,6 +32,8 @@
 
 										<div class="col-md-6">
 	            					<input type="text" name="m_tel"  required placeholder="Your tel"></div>
+									<div class="col-md-6">
+			            					<input type="text" name="m_type"  required placeholder="Your tel" value="0" hidden></div>
 
                         <div class="col-md-12">
       										<button  type="submit" class="site-btn">Sign in</button>

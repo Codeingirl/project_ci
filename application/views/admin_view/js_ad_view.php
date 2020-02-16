@@ -28,7 +28,35 @@
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+<script type="text/javascript">
+  <?php if($this->session->flashdata('register_success')):?>
+  swal ("ดำเนินการสำเร็จ","","success")
+  <?php endif; ?>
+</script>
 
+<script type="text/javascript">
+  <?php if($this->session->flashdata('register_fail')):?>
+  swal ("ดำเนินการไม่สำเร็จ","กรุณาลองใหม่","error")
+  <?php endif; ?>
+</script>
+
+<script type="text/javascript">
+  <?php if($this->session->flashdata('register_img_error')):?>
+  swal ("ไม่มีรูปภาพ","กรุณาใส่รูปภาพ","error")
+  <?php endif; ?>
+</script>
+
+<script type="text/javascript">
+  <?php if($this->session->flashdata('register_email_fail')):?>
+  swal ("emailซ้ำ","กรุณาเปลี่ยนใหม่","error")
+  <?php endif; ?>
+</script>
+
+<script type="text/javascript">
+  <?php if($this->session->flashdata('register_pass_error')):?>
+  swal ("passwordไม่ตรงกัน","กรุณาแก้ไข่","error")
+  <?php endif; ?>
+</script>
 <!-- MDB core JavaScript -->
 <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/js/mdb.min.js"></script> -->
 </body>

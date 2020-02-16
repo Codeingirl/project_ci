@@ -50,6 +50,7 @@ class Member extends CI_Controller {
 		// print_r($_POST);
 		// echo '</pre>';
 		$this->member_model->deldata($m_id);
+		$this->session->set_flashdata('register_success',TRUE);
 		redirect('Member','refresh');
 	}
 
@@ -57,7 +58,6 @@ class Member extends CI_Controller {
 public function logout()
 {
 		$this->session->sess_destroy();//ล้างsession
-
 		redirect('Mainpage');//กลับไปหน้า Login
 }
 //-----------------------------//

@@ -45,7 +45,8 @@ public function adding()
 	$this->load->library('upload',$config);
 	if (! $this->upload->do_upload('m_img'))
 	{
-			echo $this->upload->display_errors();
+		$this->session->set_flashdata('register_img_error',TRUE);
+		redirect('Home/sign_in');
 	}else {
 		$data = $this->upload->data();
 		$filename = $data['file_name'];
@@ -55,14 +56,15 @@ public function adding()
 			$m_lname         = $this->input->post('m_lname');
 			$m_email             = $this->input->post('m_email');
 			$m_password          = $this->input->post('m_password');
+			$m_type							=	$this->input->post('m_type');
 			$m_confirmpassword   = $this->input->post('m_confirmpassword');
 			$m_tel            = $this->input->post('m_tel');
 
 
 	if ($this->Register_model->addmember($m_email))
 	{
-		 $this->session->flashdata('msg','ขออภัย E-mail นี้มีผู้อื่นใช้แล้ว กรุณาลองใหม่อีกครั้ง');
-				return redirect('register');
+		 $this->session->set_flashdata('register_email_fail',TRUE);
+		redirect('Home/sign_in');
 	}
 	else
 	{
@@ -76,18 +78,20 @@ public function adding()
 				 'm_password'=>sha1($m_password),
 				 'm_email' => $m_email,
 				 'm_tel'  => $m_tel,
+				 'm_type' => $m_type,
 				 'm_img' => $filename
 
-				);
+			 );
 			 }
 			 else
 			 {
-				 $this->session->set_flashdata('msg','ยืนยันรหัสผ่านไม่ตรงกัน กรุณาลองใหม่อีกครั้ง');
-				return redirect('register');
+				 $this->session->set_flashdata('register_pass_error',TRUE);
+				redirect('Home','refresh');
 			 }
 
 			 $success = $this->db->insert('tbl_member',$data);
-			 return redirect('Mainpage/success');
+			 $this->session->set_flashdata('register_success',TRUE);
+			 redirect('Home','refresh');
 			 }
 	}
 

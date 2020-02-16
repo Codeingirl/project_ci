@@ -40,6 +40,7 @@ class Admin extends CI_Controller {
 		// print_r($_POST);
 		// echo '</pre>';
 		$this->member_model->deldata($m_id);
+		$this->session->set_flashdata('register_success',TRUE);
 		redirect('admin','refresh');
 	}
 //-----------------------------------------------//
@@ -75,7 +76,7 @@ class Admin extends CI_Controller {
 		$this->load->library('upload',$config);
 		if (! $this->upload->do_upload('blog_img'))
 		{
-			echo $this->upload->display_errors();
+			$this->session->set_flashdata('register_img_error',TRUE);
 		}else {
 			$data = $this->upload->data();
 			$filename = $data['file_name'];
@@ -94,9 +95,10 @@ class Admin extends CI_Controller {
 
 		$query=$this->db->insert('tbl_blog',$data);
 		if($query){
+			$this->session->set_flashdata('register_success',TRUE);
 			redirect('admin/blog','refresh');
 		}else {
-						echo 'false';
+						$this->session->set_flashdata('register_fail',TRUE);
 					}
 		}
 	}
@@ -145,7 +147,7 @@ class Admin extends CI_Controller {
 		$this->load->library('upload',$config);
 		if (! $this->upload->do_upload('blog_img'))
 		{
-			echo $this->upload->display_errors();
+			$this->session->set_flashdata('register_img_error',TRUE);
 		}else {
 			$data = $this->upload->data();
 			$filename = $data['file_name'];
@@ -165,9 +167,10 @@ class Admin extends CI_Controller {
 				$query=$this->db->update('tbl_blog',$data);
 
 				if($query){
+					$this->session->set_flashdata('register_success',TRUE);
 					redirect('Admin/blog','refresh');
 				}else {
-					echo 'false';
+					$this->session->set_flashdata('register_fail',TRUE);
 				}
 			}
 		}
@@ -175,6 +178,7 @@ class Admin extends CI_Controller {
 	public function blog_delete($blog_id)
 	{
 		$this->member_model->blog_delete($blog_id);
+		$this->session->set_flashdata('register_success',TRUE);
 		redirect('Admin/blog','refresh');
 	}
 //------------------------------------------------------------//
@@ -270,6 +274,7 @@ public function comment_form($blog_id)
 public function comment_delete($comment_id)
 {
 	$this->member_model->comment_delete($comment_id);
+	$this->session->set_flashdata('register_success',TRUE);
 	redirect('Admin/comment','refresh');
 }
 //-----------------------------------------------------------------------------//

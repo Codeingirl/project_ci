@@ -28,3 +28,33 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   </div>
 </div>
 </div>
+
+<script type="text/javascript">
+  <?php if($this->session->flashdata('register_success')):?>
+  swal ("ดำเนินการสำเร็จ","","success")
+  <?php endif; ?>
+</script>
+
+<script type="text/javascript">
+  <?php if($this->session->flashdata('register_fail')):?>
+  swal ("ดำเนินการไม่สำเร็จ","กรุณาลองใหม่","error")
+  <?php endif; ?>
+</script>
+
+<script type="text/javascript">
+  <?php if($this->session->flashdata('register_img_error')):?>
+  swal ("ไม่มีรูปภาพ","กรุณาใส่รูปภาพ","error")
+  <?php endif; ?>
+</script>
+
+<script type="text/javascript">
+  <?php if($this->session->flashdata('register_email_fail')):?>
+  swal ("emailซ้ำ","กรุณาเปลี่ยนใหม่","error")
+  <?php endif; ?>
+</script>
+
+<script type="text/javascript">
+  <?php if($this->session->flashdata('register_pass_error')):?>
+  swal ("passwordไม่ตรงกัน","กรุณาแก้ไข่","error")
+  <?php endif; ?>
+</script>

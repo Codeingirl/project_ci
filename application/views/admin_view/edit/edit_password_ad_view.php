@@ -6,7 +6,7 @@
       <br><br><br><br>
 			<h2>Update data</h2>
 			<br>
-		  <form action="<?php echo site_url('register/edit_img') ?>" method="post" class="form-horizontal" enctype="multipart/form-data">
+		  <form action="<?php echo site_url('Register/edit_password') ?>" method="post" class="form-horizontal" enctype="multipart/form-data">
 
 				<div class="form-group row">
 					<div class="col-sm-2 control-label"> Password </div>

@@ -33,7 +33,8 @@
         <input id="Comment_userID" name="m_id" type="text" class="form-control" value="<?php echo ($_SESSION['m_id']); ?>" hidden>
         <input id="Comment_userNAME" name="comment_name" type="text" class="form-control" value="<?php echo ($_SESSION['m_name']); ?>" hidden>
         <!-- <input name="blog_id" type="hidden" class="form-control" value="<?php echo $query->blog_id; ?>" > -->
-        <input type="hidden" name="blog_id" value="<?php echo $row->blog_id;?>">
+        <input type="hidden" name="blog_id" value="<?php echo $this->uri->segment(3) ?>">
+
         <br><br>
 
         <div align="right">

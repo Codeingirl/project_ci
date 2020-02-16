@@ -15,7 +15,7 @@ class Mainpage extends CI_Controller {
 	{
 		$data['query'] = $this->Member_model->blogjoin();
 		$this->load->view('main_view/header_m_view');
-		$this->load->view('main_view/navbar/navbar_m_view');
+		$this->load->view('main_view/navbar/navbar_member_m_view');
 		$this->load->view('main_view/main/main_m_view',$data);
 		$this->load->view('main_view/footer_m_view');
 		$this->load->view('main_view/js_m_view');
@@ -25,7 +25,7 @@ class Mainpage extends CI_Controller {
 	{
 
   		$this->load->view('main_view/header_m_view');
-  		$this->load->view('main_view/navbar/navbar_m_view');
+  		$this->load->view('main_view/navbar/navbar_member_m_view');
   		$this->load->view('main_view/blog/Blog_news_view');
   		$this->load->view('main_view/footer_m_view');
   		$this->load->view('main_view/js_m_view');
@@ -170,7 +170,7 @@ class Mainpage extends CI_Controller {
 		$this->load->library('upload',$config);
 		if (! $this->upload->do_upload('blog_img'))
 		{
-			echo $this->upload->display_errors();
+			$this->session->set_flashdata('register_img_error',TRUE);
 		}else {
 			$data = $this->upload->data();
 			$filename = $data['file_name'];
@@ -189,9 +189,10 @@ class Mainpage extends CI_Controller {
 
 		$query=$this->db->insert('tbl_blog',$data);
 		if($query){
+			$this->session->set_flashdata('register_success',TRUE);
 			redirect('Mainpage/member','refresh');
 		}else {
-						echo 'false';
+						$this->session->set_flashdata('register_fail',TRUE);
 					}
 		}
 	}
@@ -229,7 +230,8 @@ public function blog_edit($blog_id)
 //---------------------------------------------------------------------------//
 public function blog_delete($blog_id)
 {
-	$this->member_model->blog_delete($blog_id);
+	$this->Member_model->blog_delete($blog_id);
+	$this->session->set_flashdata('register_success',TRUE);
 	redirect('Mainpage','refresh');
 }
 //---------------------------------------------------------------------------//
@@ -252,7 +254,7 @@ public function blog_update()
 	$this->load->library('upload',$config);
 	if (! $this->upload->do_upload('blog_img'))
 	{
-		echo $this->upload->display_errors();
+		$this->session->set_flashdata('register_img_error',TRUE);
 	}else {
 		$data = $this->upload->data();
 		$filename = $data['file_name'];
@@ -260,7 +262,7 @@ public function blog_update()
 				'blog_name' => $this->input->post('blog_name'),
 				// 'blog_date' => $this->input->post('blog_date'),
 				'blog_type' => $this->input->post('blog_type'),
-				// 'member_ID' => $this->input->post('member_ID'),
+				// 'Member_ID' => $this->input->post('member_ID'),
 				'blog_img' => $filename,
 				'blog_details' => $this->input->post('blog_details')
 			);
@@ -272,9 +274,10 @@ public function blog_update()
 			$query=$this->db->update('tbl_blog',$data);
 
 			if($query){
+				$this->session->set_flashdata('register_success',TRUE);
 				redirect('Mainpage','refresh');
 			}else {
-				echo 'false';
+				$this->session->set_flashdata('register_fail',TRUE);
 			}
 		}
 	}
@@ -294,9 +297,10 @@ public function comment_add(){
 
 	$query=$this->db->insert('tbl_comment',$data);
 	if($query){
+		$this->session->set_flashdata('register_success',TRUE);
 		redirect('Mainpage/blog_details/'.$blog_id,'refresh');
 	}else {
-					echo 'false';
+					$this->session->set_flashdata('register_fail',TRUE);
 				}
 }
 //---------------------------------------------------------------------------//

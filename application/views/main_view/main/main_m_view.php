@@ -14,7 +14,6 @@
               <div class="post-metas">
                 <div class="post-meta"><?php echo $row->m_name; ?></div>
                 <div class="post-meta">in <a href="#"><?php echo $row->blog_type_name; ?></a></div>
-                <div class="post-meta">3 Comments</div>
               </div>
               <a href="<?php echo site_url('Home/blog_details') ?>/<?php echo $row->blog_id; ?>" class="site-btn">Read More</a>
             </div>
