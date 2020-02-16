@@ -57,7 +57,7 @@ class Admin extends CI_Controller {
 	public function blog_form_register()
 	{
 		$this->load->view('admin_view/css_ad_view');
-		$this->load->view('admin_view/header_ad_view2',);
+		$this->load->view('admin_view/header_ad_view2');
 		$this->load->view('admin_view/blog/blog_form_ad_view');
 		$this->load->view('admin_view/footer_ad_view');
 		$this->load->view('admin_view/js_ad_view');
@@ -108,7 +108,7 @@ class Admin extends CI_Controller {
 	  $data['query']=$this->member_model->blogjoin();
 
 		$this->load->view('admin_view/css_ad_view');
-		$this->load->view('admin_view/header_ad_view2',);
+		$this->load->view('admin_view/header_ad_view2');
 		$this->load->view('admin_view/blog/blog_edit_ad_view',$data);
 		$this->load->view('admin_view/footer_ad_view');
 		$this->load->view('admin_view/js_ad_view');
@@ -236,7 +236,7 @@ public function blog_me($m_id)
 		// exit;
 		$data['query']=$this->member_model->blogjoin_member($m_id);
 		$this->load->view('admin_view/css_ad_view');
-		$this->load->view('admin_view/header_ad_view2',);
+		$this->load->view('admin_view/header_ad_view2');
 		$this->load->view('admin_view/blog/blog_me_ad_view',$data);
 		$this->load->view('admin_view/footer_ad_view');
 		$this->load->view('admin_view/js_ad_view');

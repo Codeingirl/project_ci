@@ -8,7 +8,7 @@
 		<a href="<?php echo site_url('Mainpage') ?>" class="site-logo" style=" padding-bottom: 9px;">
 			<img src="<?php echo base_url('img/Gaming mate.png');?>" alt="logo" >
 		</a>
-		<ul class="main-menu" style="background: #222222; position: fixed;">
+		<ul class="main-menu" style="background: #222222; position: fixed; height:80px;">
 			<!-- <li style="background: #222222;"><a href="<?php //echo site_url('Mainpage') ?>
 			">Home</a></li>
 			<li style="background: #222222;"><a href="game.html">Games</a></li>
@@ -35,53 +35,39 @@
 						<div class="container-fluid">
 								<ul class="navbar-mobile__list list-unstyled">
 									<li class="has-sub">
-												<a class="js-arrow" href="">
-														<i class="fas fa-tachometer-alt"></i>Member Manager</a>
-												<ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-													<li>
-															<a href="<?php echo site_url('Admin') ?>">ข้อมูลผู้ใช้งาน</a>
-													</li>
-														<li>
-																<a href="<?php echo site_url('Admin/edit_password/')?><?php echo $_SESSION['m_id'] ?> ">แก้ไขรหัสผ่าน</a>
-														</li>
-														<li>
-																<a href="<?php echo site_url('Admin/edit_img/')?><?php echo $_SESSION['m_id'] ?>">แก้ไขรูปโปรไฟล์</a>
-														</li>
-														<li>
-																<a href="<?php echo site_url('Admin/edit_data/') ?><?php echo $_SESSION['m_id'] ?>">แก้ไขข้อมูลUser</a>
-														</li>
-														<li>
-																<a href="index4.html">แก้ไขสิทธิ์การใช้งาน</a>
-														</li>
-												</ul>
-										</li>
-										<li class="has-sub">
-													<a class="js-arrow" href="">
-															<i class="fas fa-tachometer-alt"></i>Blog Manager</a>
-													<ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-														<li>
-																<a href="<?php echo site_url('Admin/blog') ;?>">ข้อมูล Blog</a>
-														</li>
-														<li>
-																<a href="<?php echo site_url('Admin/blog_me') ;?>">My Blog</a>
-														</li>
-													</ul>
-											</li>
-											<li class="has-sub">
-														<a class="js-arrow" href="#">
-																<i class="fa fa-comments"></i>Comment Manager</a>
-														<ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-															<li>
-																	<a href="<?php echo site_url('Admin/comment');?>">ข้อมูล Comment Blog</a>
-															</li>
-														</ul>
-												</li>
+												<a class="js-arrow" href="<?php echo site_url('Mainpage/add_blog_member') ?>/<?php echo $_SESSION['m_id'] ?>">
+														<i class="fas fa-folder"></i>Add Blog</a>
+									</li>
+									<li class="has-sub">
+													<a class="js-arrow" href="<?php echo site_url('Mainpage/blog_me') ?>/<?php echo $_SESSION['m_id'] ?>">
+															<i class="fas fa-folder-open"></i>My Blogs</a>
+									</li>
+									<li class="has-sub">
+														<a class="js-arrow" href="<?php echo site_url('Mainpage/m_edit_data') ?>/<?php echo $_SESSION['m_id'] ?>">
+																<i class="fa fa-exclamation-circle"></i>Change Your info</a>
+									</li>
+									<li class="has-sub">
+														<a class="js-arrow" href="<?php echo site_url('Mainpage/m_edit_img') ?>/<?php echo $_SESSION['m_id'] ?>">
+																<i class="fa fa-group"></i>Change Profile</a>
+									</li>
+									<li class="has-sub">
+														<a class="js-arrow" href="<?php echo site_url('Mainpage/m_edit_password') ?>/<?php echo $_SESSION['m_id'] ?>">
+																<i class="fa fa-gears"></i>Change Password</a>
+									</li>
+									<li class="has-sub">
+														<a class="js-arrow" href="<?php echo site_url('Mainpage') ?>">
+																<i class="fa fa-bookmark"></i>Mainpage</a>
+									</li>
+									<li class="has-sub">
+														<a class="js-arrow" href="<?php echo site_url('Member/logout') ?>">
+																<i class="fa fa-lock"></i>Logout</a>
+									</li>
 								</ul>
 						</div>
 				</nav>
 		</header>
 			<div class="header" style="background: #222222;">
-				<header class="header-desktop" style="background: #222222;">
+				<header class="header-desktop" style="background: #222222;height: 80px;">
 						<div class="section__content section__content--p30">
 								<div class="container-fluid">
 										<div class="header-wrap">
